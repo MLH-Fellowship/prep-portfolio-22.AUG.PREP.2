@@ -1,15 +1,19 @@
 - name: Will
   img: logo.jpg
   location: London, UK
+  icons: [linkedin, twitter, resume, github] 
 
 - name: Amanda
   img: amanda.jpg
   location: New York City, USA
+  icons: [linkedin, twitter, resume, github] 
 
 - name: Aaron
   img: aaron.jpg
   location: London, UK
+  icons: [linkedin, twitter, resume, github] 
 
 - name: Swift
   img: swift.jpg
   location: New York City, USA
+  icons: [linkedin, twitter, resume, github] 
