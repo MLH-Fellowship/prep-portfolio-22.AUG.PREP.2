@@ -8,19 +8,18 @@
         font-weight: 700;
         color: white;
     }
-    
     img {
         border-radius: 50%;
-        max-width: 10em;
-        max-height: 10em;
+        max-width: 13em;
+        max-height: 13em;
         margin-left: auto;
         margin-right: auto;
-        display: inline;        
+        display: inline;
         padding: 20px;
     }
-    
     .profile-picture {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+        padding-top: 10px;
         min-height: 200px;
     }
 }
