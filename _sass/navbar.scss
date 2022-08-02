@@ -6,10 +6,23 @@
     padding-top: 10px;
 }
 
+.nav-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .nav-content .logo-touch-target {
     display: inline-flex;
     height: 60%;
     width: 350px;
+}
+
+.nav-item {
+    color: white;
+    font-size: 1.5rem;
+    padding: 0 2rem;
 }
 
 .nav-content .nav-logo {
