@@ -5,13 +5,20 @@
 {% include header.html %}
 
 <body>
-    {% include navbar.html %}
+    <div id="page-container">
+        <div id="content-wrap">
+            {% include navbar.html %}
 
-    {% include profile.html %}
-    
-    {% include description.html %}
-    
-    {% include projects.html %}
+            {% include profile.html %}
+            
+            {% include description.html %}
+            
+            {% include projects.html %}
+        </div>
+
+            {% include footer.html %}
+    </div>
+
 </body>
-
+    
 </html>
