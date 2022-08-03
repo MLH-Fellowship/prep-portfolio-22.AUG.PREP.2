@@ -1,15 +1,51 @@
-- name: Will
-  img: logo.jpg
-  location: London, UK
+- name: Ahmed Atwa
+  img: AhmedAtwa.jpeg
+  location: Cairo, Egypt
 
-- name: Amanda
-  img: amanda.jpg
-  location: New York City, USA
+- name: Ziad Gamalelden
+  img: ZiadGamaleldin.jpg
+  location: Tanta, Egypt
 
-- name: Aaron
-  img: aaron.jpg
-  location: London, UK
+- name: Omeir Fawaz
+  img: OmeirFawaz.png
+  location: New Delhi, India
 
-- name: Swift
-  img: swift.jpg
-  location: New York City, USA
+- name: Jane Ling
+  img: JaneLing.jpeg
+  location: London, United Kingdom
+
+- name: Yanna Lin
+  img: YannaL.jpg
+  location: Gainesville, Florda, USA
+
+- name: Bevin Duncan
+  img: BevinDuncan.jpg
+  location: Seattle, WA, USA
+
+- name: Grace Gong
+  img: GraceGong.jpeg
+  location: Toronto, Canada
+
+- name: Wisdom Ekpotu
+  img: WisdomEkpotu.jpg
+  location: Port-Harcourt, Nigeria
+
+- name: Zeyu Wang
+  img: ZeyuWang.png
+  location: Los Angeles, CA, USA
+
+- name: Ahmed Saed
+  img: AhmedSaed.png
+  location: 6th October City, Egypt
+
+- name: Keaton Martin
+  img: Keaton.png
+  location: Versailles, KY, USA
+
+- name: Yuehan Wang
+  img: YuehanWang.jpeg
+  location: Chicago, USA
+
+- name: Shengyuan Lu
+  img: ShengyuanLu.png
+  location: Irvine, CA, USA
