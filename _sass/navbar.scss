@@ -58,9 +58,7 @@
 }
 
 .fade-in {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(20vh);
+    opacity: 1;
     transition: opacity 0.3s ease-out, transform 0.2s ease-out;
 }
 
