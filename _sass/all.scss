@@ -30,6 +30,9 @@
   }
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     background-color: #f5f5f9;
@@ -84,12 +87,12 @@ a {
 }
 
 .icon {
-    width: 70px;
-    height: 70px;
-    margin-right: 20px;
-    padding: 10px;
-
-    img {
-        width: 100%;
-    }
+  flex-wrap: wrap;
+  flex-direction: column;
+  display: flexbox;
+  
+  .social-link-icon {
+    width: 10%;
+    height: 10%;
+  }
 }
