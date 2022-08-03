@@ -1,9 +1,12 @@
 <header class="nav-bar">
     <div class="nav-content">
         <a href="{{ '/' | relative_url }}">
-            <div class="nav-logo">
+            <div class="nav-logo fade-in">
                 <img src="./assets/img/mlh-prep.png" />
             </div>
+        </a>
+        <div id="mobile-nav">Menu</div>
+        <div class="nav-list hidden">
             <a href="#members">
                 <div class="nav-item">
                     Members
@@ -14,7 +17,30 @@
                     Projects
                 </div>
             </a>
-        </a>
+        </div>
 
     </div>
 </header>
+
+<script>
+    let navLogo = document.getElementsByClassName("nav-logo")[0];
+    let navList = document.getElementsByClassName("nav-list")[0];
+    let mobileNav = document.getElementById("mobile-nav");
+
+    window.addEventListener("scroll", function () {
+        let scrollTop = window.pageYOffset;
+        if (scrollTop > 0) {
+            navLogo.classList.add("fade-in");
+            navLogo.classList.add("visible");
+        }
+    });
+
+    mobileNav.onclick = function() {
+        if (navList.classList.contains("hidden")) {
+            navList.classList.remove("hidden");
+        }
+        else {
+            navList.classList.add("hidden");
+        }
+    };
+</script>
