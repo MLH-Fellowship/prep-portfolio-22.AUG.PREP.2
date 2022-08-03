@@ -1,15 +1,35 @@
 - name: Will
   img: logo.jpg
   location: London, UK
+  icons: [linkedin, twitter, resume, github] 
+  github: https://github.com/MLH-Fellowship
+  twitter: https://twitter.com/MLHacks
+  resume: https://drive.google.com/file/d/1PSJDHLkKrf5A_-eRf4Dsxfh9WNnl9p8E/view?usp=sharing
+  linkedin: https://www.linkedin.com/company/major-league-hacking
 
 - name: Amanda
   img: amanda.jpg
   location: New York City, USA
+  icons: [linkedin, twitter, resume, github] 
+  github: https://github.com/MLH-Fellowship
+  twitter: https://twitter.com/MLHacks
+  resume: https://drive.google.com/file/d/1PSJDHLkKrf5A_-eRf4Dsxfh9WNnl9p8E/view?usp=sharing
+  linkedin: https://www.linkedin.com/company/major-league-hacking
 
 - name: Aaron
   img: aaron.jpg
   location: London, UK
+  icons: [linkedin, twitter, resume, github] 
+  github: https://github.com/MLH-Fellowship
+  twitter: https://twitter.com/MLHacks
+  resume: https://drive.google.com/file/d/1PSJDHLkKrf5A_-eRf4Dsxfh9WNnl9p8E/view?usp=sharing
+  linkedin: https://www.linkedin.com/company/major-league-hacking
 
 - name: Swift
   img: swift.jpg
   location: New York City, USA
+  icons: [linkedin, twitter, resume, github] 
+  github: https://github.com/MLH-Fellowship
+  twitter: https://twitter.com/MLHacks
+  resume: https://drive.google.com/file/d/1PSJDHLkKrf5A_-eRf4Dsxfh9WNnl9p8E/view?usp=sharing
+  linkedin: https://www.linkedin.com/company/major-league-hacking
