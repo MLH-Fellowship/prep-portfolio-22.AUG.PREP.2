@@ -79,14 +79,12 @@ a {
 }
 
 .icon {
-    width: 70px;
-    height: 70px;
-    margin-left: -15px;
-    margin-right: 20px;
-    padding: 10px;
-    display: flex;
-    img {
-        width: 100%;
-        margin: 0 8%;
-    }
+  flex-wrap: wrap;
+  flex-direction: column;
+  display: flexbox;
+  
+  .social-link-icon {
+    width: 10%;
+    height: 10%;
+  }
 }
