@@ -17,14 +17,20 @@
                     Projects
                 </div>
             </a>
+            <a href="#dark-mode" class="toggle-dark-mode">
+                <div class="nav-item">
+                    <i id="dark-icon" class="fa fa-moon"></i>
+                    <span id="dark-text"> SunSet </span>
+                </div>
+            </a>
         </div>
-
     </div>
 </header>
 
 <script>
     let navLogo = document.getElementsByClassName("nav-logo")[0];
     let navList = document.getElementsByClassName("nav-list")[0];
+    let darkMode = document.getElementsByClassName("toggle-dark-mode")[0];
     let mobileNav = document.getElementById("mobile-nav");
 
     window.addEventListener("scroll", function () {
@@ -43,4 +49,50 @@
             navList.classList.add("hidden");
         }
     };
+
+    darkMode.onclick = function() {
+        darkmode();
+    }
+
+    function darkmode() {
+        // console.log("HELLO WORLD!")
+        let enabled = localStorage.getItem('dark-mode')
+
+        if (enabled === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                enable();
+            }
+        } else if (enabled === 'true') {
+            enable()
+        }
+
+        if (localStorage.getItem('dark-mode') === 'false') {
+            enable();
+        } else {
+            disable();
+        }
+    }
+
+    function enable()  {
+        DarkReader.setFetchMethod(window.fetch)
+        DarkReader.enable();
+        localStorage.setItem('dark-mode', 'true');
+        
+        const span = document.getElementById('dark-text');
+        span.textContent = 'SunRise';
+        
+        const i = document.getElementById('dark-icon');
+        i.className = 'fa fa-sun';
+    }
+
+    function disable() {
+        DarkReader.disable();
+        localStorage.setItem('dark-mode', 'false');
+
+        const span = document.getElementById('dark-text');
+        span.textContent = 'SunSet';
+
+        const i = document.getElementById('dark-icon');
+        i.className = 'fa fa-moon';
+    }
 </script>
