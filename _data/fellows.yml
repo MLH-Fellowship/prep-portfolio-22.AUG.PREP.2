@@ -2,7 +2,7 @@
   img: AhmedAtwa.jpeg
   location: Cairo, Egypt
   icons: [linkedin, twitter, resume, github] 
-  github: Deadreyo
+  github: https://github.com/Deadreyo
   twitter: https://twitter.com/MLHacks
   resume: [link to resume]
   linkedin: https://www.linkedin.com/company/major-league-hacking
@@ -10,64 +10,64 @@
 - name: Ziad Gamalelden
   img: ZiadGamaleldin.jpg
   location: Tanta, Egypt
-  github: ZAK0EE
+  github: https://github.com/ZAK0EE
 
 - name: Omeir Fawaz
   img: OmeirFawaz.png
   location: New Delhi, India
-  github: omeiirr
+  github: https://github.com/omeiirr
 
 - name: Jane Ling
   img: JaneLing.jpeg
   location: London, United Kingdom
-  github: jcyling
+  github: https://github.com/jcyling
 
 - name: Yanna Lin
   img: YannaL.jpg
   location: Gainesville, Florda, USA
-  github: linyanna
+  github: https://github.com/linyanna
 
 - name: Bevin Duncan
   img: BevinDuncan.jpg
   location: Seattle, WA, USA
-  github: bevin-duncan
+  github: https://github.com/bevin-duncan
 
 - name: Grace Gong
   img: GraceGong.jpeg
   location: Toronto, Canada
-  github: ggongg
+  github: https://github.com/ggongg
 
 - name: Wisdom Ekpotu
   img: WisdomEkpotu.jpg
   location: Port-Harcourt, Nigeria
-  github: wisdomekpotu
+  github: https://github.com/wisdomekpotu
 
 - name: Zeyu Wang
   img: ZeyuWang.png
   location: Los Angeles, CA, USA
-  github: wzy0766
+  github: https://github.com/wzy0766
 
 - name: Ahmed Saed
   img: AhmedSaed.png
   location: 6th October City, Egypt
-  github: Ahmedsaed
+  github: https://github.com/Ahmedsaed
 
 - name: Keaton Martin
   img: Keaton.png
   location: Versailles, KY, USA
-  github: keatonmartin
+  github: https://github.com/keatonmartin
 
 - name: Yuehan Wang
   img: YuehanWang.jpeg
   location: Chicago, USA
-  github: Yuehan-Wang
+  github: https://github.com/Yuehan-Wang
 
 - name: Shengyuan Lu
   img: ShengyuanLu.png
   location: Irvine, CA, USA
-  github: shengyuan-lu
+  github: https://github.com/shengyuan-lu
 
 - name: Fareeda Ragab
   img: Farida.jpg
   location: Alexandria, Egypt
-  github: farida52369
+  github: https://github.com/farida52369
