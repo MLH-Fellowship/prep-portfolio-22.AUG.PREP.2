@@ -12,7 +12,6 @@
   interests: Hanging out with friends, trying out restaurants, and playing games.
   university: Ain Shams University
 
-
 - name: Ziad Gamalelden
   img: ZiadGamaleldin.jpg
   location: Tanta, Egypt
@@ -64,10 +63,14 @@
   twitter: https://twitter.com/MLHacks
   resume: [link to resume]
   linkedin: https://www.linkedin.com/company/major-league-hacking
-  description: testing
-  favLangs: testing
-  interests: testing
-  university: testing
+  description: Hi, I'm Yanna! I’m attending the University of Florida, studying Computer Science with a minor in Digital Arts
+   and Sciences. I have worked on a range of school-related and personal software projects, 
+   and I hope to keep learning and developing my skills as a software engineer.
+  favLangs: Python, C++
+  interests: I have a range of hobbies but reading novels and watching movies/shows are the main ones. 
+    I’m currently trying to learn roller skating though!
+  university: University of Florida
+
 
 
 - name: Bevin Duncan
@@ -98,10 +101,11 @@
   twitter: https://twitter.com/MLHacks
   resume: [link to resume]
   linkedin: https://www.linkedin.com/company/major-league-hacking
-  description: testing
-  favLangs: testing
-  interests: testing
-  university: testing
+  description: Incoming Junior at Western University in Computer Science and Business. 
+    Global Wholesale Operations Intern at Scotiabank. 
+  favLangs: Javascript
+  interests: Reading, Hiking, Swimming, Playing Badminton or Volleyball. 
+  university: Western University 
 
 
 - name: Wisdom Ekpotu
