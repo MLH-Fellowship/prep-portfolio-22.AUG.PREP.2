@@ -6,18 +6,26 @@
             <p class="title"> {{ item.name }}</p>
             <p class="location"> {{ item.location }}</p>
             <div class="icon">
-                <a href= {{ item.github }}>
+                {% if item.linkedin %}
+                <a href= {{ item.linkedin }}>
                     <img class="social-link-icon" src="../assets/img/icons/linkedin.png">                    
                 </a>
+                {% endif %}
+                {% if item.twitter %}
                 <a href= {{ item.twitter }}>
                     <img class="social-link-icon" src="../assets/img/icons/twitter.png">                
                 </a>
+                {% endif %}
+                {% if item.resume %}
                 <a href= {{ item.resume }}>
                     <img class="social-link-icon" src="../assets/img/icons/resume.png">
                 </a>
-                <a href= {{ item.linkedin }}>
+                {% endif %}
+                {% if item.github %}
+                <a href= {{ item.github }}>
                     <img class="social-link-icon" src="../assets/img/icons/github.png">
                 </a>
+                {% endif %}
             </div>
         </div>
     </div>
