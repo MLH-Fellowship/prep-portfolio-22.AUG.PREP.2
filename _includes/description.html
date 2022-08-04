@@ -1,84 +1,33 @@
 <h2>Meet the Pod</h2>
 <div id="members" class="card-container">
-    <script>
-        const commitUrl = 'https://api.github.com/repos/MLH-Fellowship/prep-portfolio-22.AUG.PREP.2/stats/contributors' // API url
-
-        let fellows = []; // initialize array holding fellows
-
-        // extract github usernames from fellows.yml
-        {% for item in site.data.fellows %} 
-            fellows.push({
-                github: "{{ item.github }}",
-                name: "{{ item.name }}",
-                location: "{{ item.location }}",
-                total: 0});
-        {% endfor %}
-
-        // get commit data from github
-        async function getCommitData( url ) {
-            const res = await fetch( url );
-            const data = await res.json();
-            return data;
-        }
-
-        getCommitData( commitUrl ).then(data => {
-            userCommits = data.map((elem, index) => {
-            return {github: elem.author.html_url, total: elem.total}
-            });
-
-            for ( const user of userCommits ) { // iterate through commit data
-                for ( const fellow of fellows ) {
-                    if (user.github == fellow.github) { // if github username matches a name in fellows.yml, update total
-                        fellow.total = user.total;
-                        continue;
-                    }
-                }
-            }
-
-            fellows.sort( (a,b) => {
-                return ( a.total > b.total ? -1 : (b.total > a.total ? 1 : 0 ));
-            }); // sort fellows based on total commits
-
-            const cardContainer = document.getElementsByClassName('card-container')[0];
-
-            let fellowsHTML = "";
-            let lock = 3;
-
-            for (const fellow of fellows) {
-                let img = '';
-
-                if (lock && lock--) {
-                    img = `<img src="../assets/img/icons/crown${3-lock}.png" class="card-badge" />`;
-                }
-
-                let cardHTML = `
-                <div class="card">
-                    <div class="info">
-                        ${img}
-                        <p class="title"> ${ fellow.name }</p>
-                        <p class="location"> ${ fellow.location }</p>
-                        <div class="icon">
-                            <a href="">
-                                <img class="social-link-icon" src="../assets/img/icons/github.png">                    
-                            </a>
-                            <a href="">
-                                <img class="social-link-icon" src="../assets/img/icons/twitter.png">                
-                            </a>
-                            <a href="">
-                                <img class="social-link-icon" src="../assets/img/icons/resume.png">
-                            </a>
-                            <a href="">
-                                <img class="social-link-icon" src="../assets/img/icons/linkedin.png">
-                            </a>
-                        </div>
-                        <p class="card-score">Commits: ${ fellow.total }</p>
-                    </div>
-                </div>
-                `
-                fellowsHTML += cardHTML;
-            }
-            cardContainer.innerHTML += fellowsHTML;
-        }
-    );
-    </script>
+    {% for item in site.data.fellows %}
+    <div class="card">
+        <div class="info">
+            <p class="title"> {{ item.name }}</p>
+            <p class="location"> {{ item.location }}</p>
+            <div class="icon">
+                {% if item.linkedin %}
+                <a href= {{ item.linkedin }}>
+                    <img class="social-link-icon" src="../assets/img/icons/linkedin.png">                    
+                </a>
+                {% endif %}
+                {% if item.twitter %}
+                <a href= {{ item.twitter }}>
+                    <img class="social-link-icon" src="../assets/img/icons/twitter.png">                
+                </a>
+                {% endif %}
+                {% if item.resume %}
+                <a href= {{ item.resume }}>
+                    <img class="social-link-icon" src="../assets/img/icons/resume.png">
+                </a>
+                {% endif %}
+                {% if item.github %}
+                <a href= {{ item.github }}>
+                    <img class="social-link-icon" src="../assets/img/icons/github.png">
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
 </div>
