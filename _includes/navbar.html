@@ -19,7 +19,7 @@
             </a>
             <a href="#dark-mode" class="toggle-dark-mode">
                 <div class="nav-item">
-                    <i id="dark-icon" class="fa fa-moon"></i>
+                    <i id="dark-icon" class="fa fa-moon" style="color: #E5E5E5;"></i>
                     <span id="dark-text"> SunSet </span>
                 </div>
             </a>
@@ -83,6 +83,7 @@
         
         const i = document.getElementById('dark-icon');
         i.className = 'fa fa-sun';
+        i.style = 'color: #FCE570;'
     }
 
     function disable() {
@@ -94,5 +95,6 @@
 
         const i = document.getElementById('dark-icon');
         i.className = 'fa fa-moon';
+        i.style = 'color: #E5E5E5;'
     }
 </script>
