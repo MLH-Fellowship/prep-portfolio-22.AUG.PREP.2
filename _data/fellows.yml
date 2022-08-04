@@ -2,7 +2,7 @@
   img: AhmedAtwa.jpeg
   location: Cairo, Egypt
   icons: [linkedin, twitter, resume, github] 
-  github: https://github.com/MLH-Fellowship
+  github: Deadreyo
   twitter: https://twitter.com/MLHacks
   resume: [link to resume]
   linkedin: https://www.linkedin.com/company/major-league-hacking
@@ -10,47 +10,64 @@
 - name: Ziad Gamalelden
   img: ZiadGamaleldin.jpg
   location: Tanta, Egypt
+  github: ZAK0EE
 
 - name: Omeir Fawaz
   img: OmeirFawaz.png
   location: New Delhi, India
+  github: omeiirr
 
 - name: Jane Ling
   img: JaneLing.jpeg
   location: London, United Kingdom
+  github: jcyling
 
 - name: Yanna Lin
   img: YannaL.jpg
   location: Gainesville, Florda, USA
+  github: linyanna
 
 - name: Bevin Duncan
   img: BevinDuncan.jpg
   location: Seattle, WA, USA
+  github: bevin-duncan
 
 - name: Grace Gong
   img: GraceGong.jpeg
   location: Toronto, Canada
+  github: ggongg
 
 - name: Wisdom Ekpotu
   img: WisdomEkpotu.jpg
   location: Port-Harcourt, Nigeria
+  github: wisdomekpotu
 
 - name: Zeyu Wang
   img: ZeyuWang.png
   location: Los Angeles, CA, USA
+  github: wzy0766
 
 - name: Ahmed Saed
   img: AhmedSaed.png
   location: 6th October City, Egypt
+  github: Ahmedsaed
 
 - name: Keaton Martin
   img: Keaton.png
   location: Versailles, KY, USA
+  github: keatonmartin
 
 - name: Yuehan Wang
   img: YuehanWang.jpeg
   location: Chicago, USA
+  github: Yuehan-Wang
 
 - name: Shengyuan Lu
   img: ShengyuanLu.png
   location: Irvine, CA, USA
+  github: shengyuan-lu
+
+- name: Fareeda Ragab
+  img: Farida.jpg
+  location: Alexandria, Egypt
+  github: farida52369
