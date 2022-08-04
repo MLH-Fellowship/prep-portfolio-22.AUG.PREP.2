@@ -11,7 +11,11 @@
                 github: "{{ item.github }}",
                 name: "{{ item.name }}",
                 location: "{{ item.location }}",
-                total: 0});
+                total: 0,
+                linkedin: "{{ item.linkedin }}",
+                twitter: "{{ item.twitter }}",
+                resum: "{{ item.resume }}"
+            });
         {% endfor %}
 
         // get commit data from github
@@ -44,6 +48,8 @@
             let fellowsHTML = "";
             let lock = 3;
 
+            console.log(fellows)
+
             for (const fellow of fellows) {
                 let img = '';
 
@@ -58,16 +64,16 @@
                         <p class="title"> ${ fellow.name }</p>
                         <p class="location"> ${ fellow.location }</p>
                         <div class="icon">
-                            <a href="">
+                            <a ${(!fellow.github) ? "hidden" : ""} href=${fellow.github}>
                                 <img class="social-link-icon" src="../assets/img/icons/github.png">                    
                             </a>
-                            <a href="">
+                            <a ${(!fellow.twitter) ? "hidden" : ""} href=${fellow.twitter}>
                                 <img class="social-link-icon" src="../assets/img/icons/twitter.png">                
                             </a>
-                            <a href="">
+                            <a ${(!fellow.resume) ? "hidden" : ""} href=${fellow.resume}>
                                 <img class="social-link-icon" src="../assets/img/icons/resume.png">
                             </a>
-                            <a href="">
+                            <a ${(!fellow.linkedin) ? "hidden" : ""} href=${fellow.linkedin}>
                                 <img class="social-link-icon" src="../assets/img/icons/linkedin.png">
                             </a>
                         </div>
