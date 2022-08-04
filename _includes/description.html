@@ -42,11 +42,19 @@
             const cardContainer = document.getElementsByClassName('card-container')[0];
 
             let fellowsHTML = "";
+            let lock = 3;
 
             for (const fellow of fellows) {
+                let img = '';
+
+                if (lock && lock--) {
+                    img = `<img src="../assets/img/icons/crown${3-lock}.png" class="card-badge" />`;
+                }
+
                 let cardHTML = `
                 <div class="card">
                     <div class="info">
+                        ${img}
                         <p class="title"> ${ fellow.name }</p>
                         <p class="location"> ${ fellow.location }</p>
                         <div class="icon">
@@ -63,6 +71,7 @@
                                 <img class="social-link-icon" src="../assets/img/icons/linkedin.png">
                             </a>
                         </div>
+                        <p class="card-score">Commits: ${ fellow.total }</p>
                     </div>
                 </div>
                 `
