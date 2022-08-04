@@ -23,7 +23,7 @@
 
         getCommitData( commitUrl ).then(data => {
             userCommits = data.map((elem, index) => {
-            return {github: elem.author.login, total: elem.total}
+            return {github: elem.author.html_url, total: elem.total}
             });
 
             for ( const user of userCommits ) { // iterate through commit data
@@ -41,7 +41,9 @@
 
             const cardContainer = document.getElementsByClassName('card-container')[0];
 
-            for ( const fellow of fellows ) {
+            let fellowsHTML = "";
+
+            for (const fellow of fellows) {
                 let cardHTML = `
                 <div class="card">
                     <div class="info">
@@ -64,9 +66,10 @@
                     </div>
                 </div>
                 `
-                cardContainer.innerHTML += cardHTML;
+                fellowsHTML += cardHTML;
             }
-        });
-
+            cardContainer.innerHTML += fellowsHTML;
+        }
+    );
     </script>
 </div>
