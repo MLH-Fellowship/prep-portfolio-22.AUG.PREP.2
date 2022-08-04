@@ -8,20 +8,30 @@
     height: fit-content;
     margin-top: 4.5rem;
     margin-bottom: 50px;
+
     h1 {
         font-size: 50px;
         font-weight: 700;
         color: white;
     }
-    img {
+
+    .profile-pic-container {
         border-radius: 50%;
-        max-width: 13em;
-        max-height: 13em;
-        margin-left: auto;
-        margin-right: auto;
-        display: inline;
-        padding: 20px;
+        width: 250px;
+        height: 250px;
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+        margin: 20px
     }
+
+    .profile-pic-container img {
+        width: 100%; 
+        height: 100%;
+        object-fit: cover;
+        overflow: hidden;
+    }
+
     .profile-picture {
         margin-bottom: 20px;
         padding-top: 10px;
