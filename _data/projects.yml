@@ -2,13 +2,22 @@
   event: MLH Prep Pod Project
   date: Fall 2021  - Batch 4.5
   page-name: project
+  owner: person1
+  summary: An app that allows users to buy and sell items online.
+  github: www.google.com
 
 - title: Todo List
   event: MLH Prep Pod Project
   date: Fall 2021  - Batch 4.5
   page-name: project
+  owner: person2
+  summary: An app that allows users to create and manage their todo lists.
+  github: www.google.com
 
 - title: iOS App
   event: MLH Prep Pod Project
   date: Fall 2021  - Batch 4.5
   page-name: project
+  owner: person3
+  summary: An iOS app that allows users to create and manage stuff.
+  github: www.google.com

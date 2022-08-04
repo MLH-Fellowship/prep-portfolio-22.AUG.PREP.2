@@ -1,16 +1,22 @@
 <h2>Projects</h2>
 <div id="projects" class="card-container">
     {% for item in site.data.projects %}
-    {% if item.page-name %}
-    <a href="/projects/{{ item.page-name }}">
-    {% else %}
-    <a>
-    {% endif %}
       <div class="card">
         <div class="info">
+          {% if item.page-name %}
+          <a href="/projects/{{ item.page-name }}">
+          {% else %}
+          <a>
+          {% endif %}
           <p class="title">{{ item.title }}</p>
+          <p class="owner">By <span class="owner-name">{{ item.owner }}</span></p>
           <p class="location">{{ item.event }}</p>
           <p class="dates">{{ item.date }}</p>
+          <p class="summary">{{ item.summary }}</p>
+          </a>
+          {% if item.github %}
+          <a class="github-link" target="_blank" href="{{ item.github }}">Link to repo</a>
+          {% endif %}
         </div>
       </div>
     </a>

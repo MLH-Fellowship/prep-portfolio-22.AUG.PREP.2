@@ -75,6 +75,16 @@ a {
         font-weight: bold;
     }
 
+    .owner {
+      font-size: 0.8em;
+      margin-top: -8px;
+      margin-bottom: 10px;
+    }
+
+    .owner-name {
+      color: green;
+    }
+
     .location, .description {
         font-size: medium;
         font-weight: 400;
@@ -83,6 +93,18 @@ a {
     .dates {
         font-size: small;
         color: #404040;
+    }
+
+    .summary {
+      border-top: 1px solid #404040;
+      margin-top: 8px;
+      padding-top: 8px;
+    }
+
+    .github-link {
+      margin-top: 40px;
+      display: block;
+      color: blueviolet;
     }
 }
 
