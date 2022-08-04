@@ -32,7 +32,8 @@
         overflow: hidden;
     }
     .profile-pic-container:hover{
-        transform: scale(1.5);
+        transform: scale(1.3);
+        transition: 0.5s;
     }
     .profile-picture {
         margin-bottom: 20px;
