@@ -101,9 +101,25 @@ hr {
     margin-bottom: 1em !important;
 }
 
+.container a img {
+    display: inline-block;
+    // width: 4%; 
+    // height: 4%;      
+    // margin-left: -60px; 
+    // margin-top: -3px;
+}
+
+.container .left-arrow a img {
+    width: 4%; 
+    height: 4%;
+    margin-left: -60px; 
+    margin-top: -3px;
+}
+
 @media screen and (max-width: 768px) {
     
     .banner {
+        display: flex;
         padding: 20px 0px 20px 0px;
         height: 110px;
     }
@@ -120,7 +136,7 @@ hr {
         font-size: 30px;
         font-weight: 700;
     }
-
+ 
     .page h1 {
         font-size: 1.5rem !important;
     }
