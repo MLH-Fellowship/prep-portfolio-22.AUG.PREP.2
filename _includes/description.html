@@ -9,10 +9,14 @@
                 github: "{{ item.github }}",
                 name: "{{ item.name }}",
                 location: "{{ item.location }}",
-                commits: 0,
                 linkedin: "{{ item.linkedin }}",
                 twitter: "{{ item.twitter }}",
-                resum: "{{ item.resume }}"
+                resum: "{{ item.resume }}",
+                commits: 0,
+                pullRequests: 0,
+                issues: 0,
+                comments: 0,
+                total: 0,
             });
         {% endfor %}
 
@@ -24,19 +28,35 @@
         }
 
         async function computeScore() {
+            // count totoal commits per user
             const rawCommitdata = await getData("https://api.github.com/repos/MLH-Fellowship/prep-portfolio-22.AUG.PREP.2/stats/contributors");
 
             let commitData = rawCommitdata.reduce((obj, item) => (obj[item.author.html_url] = item.total, obj) ,{});
-            
-            for (const fellow of fellows) {
-                fellow.commits = (!commitData[fellow.github]) ? 0 : commitData[fellow.github];
-            }
-            
+
+            // count created issues and PRs (closed ones) per user
             const rawClosedIssuesData = await getData("https://api.github.com/repos/MLH-Fellowship/prep-portfolio-22.AUG.PREP.2/issues?state=closed")
             
+            let closedIssuesData = rawClosedIssuesData.reduce((obj, item) => {
+                let prs = 0, issues = 0;
+                
+                prs = ((obj[item.user.html_url]) ? obj[item.user.html_url][0] : 0) + (item.pull_request != undefined)
+                issues = ((obj[item.user.html_url]) ? obj[item.user.html_url][1] : 0) + !(item.pull_request != undefined)
+                
+                return (obj[item.user.html_url] = [prs, issues], obj)
+            },
+            {});
             
+            // Assign the number to each fellow and calculate total score
+            for (const fellow of fellows) {
+                fellow.commits = (!commitData[fellow.github]) ? 0 : commitData[fellow.github];
+                fellow.pullRequests = !(closedIssuesData[fellow.github]) ? 0 : closedIssuesData[fellow.github][0];
+                fellow.issues = !(closedIssuesData[fellow.github]) ? 0 : closedIssuesData[fellow.github][1];
+                fellow.comments = 0; // TODO
+                fellow.total = fellow.commits + fellow.pullRequests + fellow.issues + fellow.comments;
+            }
+
             fellows.sort((a, b) => {
-                return (a.commits < b.commits) ? 1 : ((b.commits < a.commits) ? -1 : 0);
+                return (a.total < b.total) ? 1 : ((b.total < a.total) ? -1 : 0);
             }); // sort fellows based on total commits
 
             const cardContainer = document.getElementsByClassName('card-container')[0];
@@ -73,7 +93,7 @@
                                 <i class="fab fa-linkedin-in fa-lg" style="color: #0A66C2;"></i>
                             </a>
                         </div>
-                        <p class="card-score">Commits: ${ fellow.commits }</p>
+                        <p class="card-score">Score: ${ fellow.total }</p>
                     </div>
                 </div>
                 `
