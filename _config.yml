@@ -1,13 +1,22 @@
-title: "Pod 22.PX.X"
+title: 'Hack2gether'
 email: fellowship@mlh.io
 description: >- # this means to ignore newlines until "baseurl:"
   This is my portfolio website!
-baseurl: "/" 
-url: "/" 
+baseurl: '/'
+url: '/'
 twitter_username: mlhacks
-github_username:  mlh-fellowship
+github_username: mlh-fellowship
 
 sass:
   sass_dir: _sass
 
 icon: /assets/img/icon.jpg
+
+page_gen-dirs: false # uncomment, if you prefer to generate named folders
+
+page_gen:
+  - data: 'fellows'
+    template: 'fellows'
+    name: 'name'
+    title: 'name'
+    dir: 'fellows'

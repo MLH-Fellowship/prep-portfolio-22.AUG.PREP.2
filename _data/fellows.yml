@@ -2,59 +2,197 @@
   img: AhmedAtwa.jpeg
   location: Cairo, Egypt
   icons: [linkedin, twitter, resume, github] 
-  github: https://github.com/MLH-Fellowship
+  github: https://github.com/Deadreyo
   twitter: https://twitter.com/MLHacks
   resume: [link to resume]
   linkedin: https://www.linkedin.com/company/major-league-hacking
+  description: A programmer driven to create applications and solutions that helps people and make their life better. 
+    Always learning, always adapting, always evolving. 
+  favLangs: Typescript, C++
+  interests: Hanging out with friends, trying out restaurants, and playing games.
+  university: Ain Shams University
 
 - name: Ziad Gamalelden
   img: ZiadGamaleldin.jpg
   location: Tanta, Egypt
+  icons: [linkedin, twitter, resume, github] 
+  github: https://github.com/ZAK0EE
+  twitter: https://twitter.com/MLHacks
+  resume: [link to resume]
+  linkedin: https://www.linkedin.com/company/major-league-hacking
+  description: I'm a Computer and Automatic control Engineer,  mainly interested in low level programming and 
+    specialized in Embedded systems. But also, I have experience with other fields such as Desktop applications 
+    and Web development, and always eager to learn new things.
+  favLangs: C/C++ and Python
+  interests: Automatic Control, gaming and weight lifting
+  university: Faculty of Engineering, Tanta University
 
 - name: Omeir Fawaz
   img: OmeirFawaz.png
   location: New Delhi, India
+  icons: [linkedin, twitter, resume, github] 
+  github: https://github.com/omeiirr
+  twitter: https://twitter.com/MLHacks
+  resume: [link to resume]
+  linkedin: https://www.linkedin.com/company/major-league-hacking
+  description: Passionate about software and all things tech 
+  favLangs: TypeScript, Golang
+  interests: Aviation
+  university: Amity University 
 
 - name: Jane Ling
   img: JaneLing.jpeg
   location: London, United Kingdom
+  icons: [linkedin, twitter, resume, github] 
+  github: https://github.com/jcyling
+  twitter: https://twitter.com/MLHacks
+  resume: [link to resume]
+  linkedin: https://www.linkedin.com/company/major-league-hacking
+  description: A self-taught software developer based in London, UK with a background in architecture and design.
+  favLangs: JavaScript
+  interests: Architecture & Design, Animations, 3D modelling
+  university: University of Manchester
 
 - name: Yanna Lin
   img: YannaL.jpg
   location: Gainesville, Florda, USA
+  icons: [linkedin, twitter, resume, github] 
+  github: https://github.com/linyanna
+  twitter: https://twitter.com/MLHacks
+  resume: [link to resume]
+  linkedin: https://www.linkedin.com/company/major-league-hacking
+  description: Hi, I'm Yanna! I’m attending the University of Florida, studying Computer Science with a minor in Digital Arts
+   and Sciences. I have worked on a range of school-related and personal software projects, 
+   and I hope to keep learning and developing my skills as a software engineer.
+  favLangs: Python, C++
+  interests: I have a range of hobbies but reading novels and watching movies/shows are the main ones. 
+    I’m currently trying to learn roller skating though!
+  university: University of Florida
+
 
 - name: Bevin Duncan
   img: BevinDuncan.jpg
   location: Seattle, WA, USA
+  icons: [linkedin, twitter, resume, github] 
+  github: https://github.com/bevin-duncan
+  twitter: https://twitter.com/MLHacks
+  resume: [link to resume]
+  linkedin: https://www.linkedin.com/company/major-league-hacking
+  description:   
+    I am a freshly-leavened software developer--recently graduated from Flatiron School-- 
+    experienced in Ruby on Rails and JavaScript based programming with a background in data science, 
+    non-profit management, mental healthcare, client-facing sales, and yoga and wellness. 
+    I possess strong skills in emotionally-intelligent team building, imaginative problem solving, 
+    and cohesive project management. I'm extroverted, enthusiastic, and thrive best in a team setting. 
+    I'm a quick learner, and am looking forward to any opportunity to grow personally and professionally.
+  favLangs: JavaScript
+  interests: Baseball, Coffee, Cats, Yoga!
+  university: Flatiron School
 
 - name: Grace Gong
   img: GraceGong.jpeg
   location: Toronto, Canada
+  icons: [linkedin, twitter, resume, github] 
+  github: https://github.com/ggongg
+  twitter: https://twitter.com/MLHacks
+  resume: [link to resume]
+  linkedin: https://www.linkedin.com/company/major-league-hacking
+  description: Incoming Junior at Western University in Computer Science and Business. 
+    Global Wholesale Operations Intern at Scotiabank. 
+  favLangs: Javascript
+  interests: Reading, Hiking, Swimming, Playing Badminton or Volleyball. 
+  university: Western University 
 
 - name: Wisdom Ekpotu
   img: WisdomEkpotu.jpg
   location: Port-Harcourt, Nigeria
+  icons: [linkedin, twitter, resume, github] 
+  github: https://github.com/wisdomekpotu
+  twitter: https://twitter.com/MLHacks
+  resume: [link to resume]
+  linkedin: https://www.linkedin.com/company/major-league-hacking
+  description: Wisdom Ekpotu is a Software Engineer and a Technical writer based in Nigeria. 
+    He is passionate about web technologies, open-source, and building communities.
+  favLangs: Javascript  and Java
+  interests: Community Building, Public Speaking, Travel
+  university: University of Uyo, Nigeria
 
 - name: Zeyu Wang
   img: ZeyuWang.png
   location: Los Angeles, CA, USA
+  icons: [linkedin, twitter, resume, github] 
+  github: https://github.com/wzy0766
+  twitter: https://twitter.com/MLHacks
+  resume: [link to resume]
+  linkedin: https://www.linkedin.com/company/major-league-hacking
+  description: Zeyu is a self-driven team player intertwined with strong computer skills.
+  favLangs: Java/Python/JavaScript
+  interests: Cooking, Traveling, Video Games
+  university: University of Southern California
 
 - name: Ahmed Saed
   img: AhmedSaed.png
   location: 6th October City, Egypt
+  icons: [linkedin, twitter, resume, github] 
+  github: https://github.com/Ahmedsaed
+  twitter: https://twitter.com/MLHacks
+  resume: [link to resume]
+  linkedin: https://www.linkedin.com/company/major-league-hacking
+  description: I write code 😉
+  favLangs: Rust, Python
+  interests: Tennis, Music
+  university: Misr University For Science And Technology 
 
 - name: Keaton Martin
   img: Keaton.png
   location: Versailles, KY, USA
+  icons: [linkedin, twitter, resume, github] 
+  github: https://github.com/keatonmartin
+  twitter: https://twitter.com/MLHacks
+  resume: [link to resume]
+  linkedin: https://www.linkedin.com/company/major-league-hacking
+  description: Hello! I am Keaton, a computer science student from Versailles, Kentucky! I am a 
+    rising sophomore at the University of Kentucky. 
+  favLangs: Python, C++
+  interests: I enjoy reading books and watching movies! My favorite author is Haruki Murakami, 
+    and my favorite film is "Paris, Texas."
+  university: University of Kentucky
 
 - name: Yuehan Wang
   img: YuehanWang.jpeg
   location: Chicago, USA
+  icons: [linkedin, twitter, resume, github] 
+  github: https://github.com/Yuehan-Wang
+  twitter: https://twitter.com/MLHacks
+  resume: [link to resume]
+  linkedin: https://www.linkedin.com/company/major-league-hacking
+  description: testing
+  favLangs: testing
+  interests: testing
+  university: testing
 
 - name: Shengyuan Lu
   img: ShengyuanLu.png
   location: Irvine, CA, USA
+  icons: [linkedin, twitter, resume, github] 
+  github: https://github.com/shengyuan-lu
+  twitter: https://twitter.com/MLHacks
+  resume: [link to resume]
+  linkedin: https://www.linkedin.com/company/major-league-hacking
+  description: I am an engineer by training, a software developer by profession, and a creative artist at heart.
+  favLangs: Swift
+  interests: Video Editing, Graphic Design
+  university: University of California, Irvine
 
 - name: Fareeda Ragab
   img: Farida.jpg
   location: Alexandria, Egypt
+  icons: [linkedin, twitter, resume, github] 
+  github: https://github.com/farida52369
+  twitter: https://twitter.com/MLHacks
+  resume: [link to resume]
+  linkedin: https://www.linkedin.com/company/major-league-hacking
+  description: interested in Programming, and Cinema
+  favLangs: Java, Python
+  interests: Cinema
+  university: Faculty of Engineering, Alex University, Egypt
