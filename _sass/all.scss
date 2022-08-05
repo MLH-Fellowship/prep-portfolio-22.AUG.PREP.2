@@ -59,6 +59,16 @@ h2 {
   padding: 1.5em;
   font-size: 1.2em;
 }
+.card img {
+  max-width: 100%;
+  border-radius: .15rem;
+  margin-bottom: .5em;
+}
+
+.card:hover {
+  transform:scale(1.05);
+  transition:transform 0.5s;
+}
 
 .card-badge {
   width: 70px;
@@ -84,27 +94,53 @@ a {
 }
 
 .info {
-  p {
-    margin-top: 5px;
-    margin: 0px;
-    text-align: left;
-  }
 
-  .title {
-    font-size: 500;
-    font-weight: bold;
-  }
+    p {
+        margin-top: 5px;
+        margin: 0px;
+        text-align: left;
+    }
 
-  .location,
-  .description {
-    font-size: medium;
-    font-weight: 400;
-  }
+    .title {
+        font-size: 500;
+        font-weight: bold;
+    }
 
-  .dates {
-    font-size: small;
-    color: #404040;
-  }
+    .owner {
+      font-size: 0.8em;
+      margin-top: -4px;
+      margin-bottom: 10px;
+    }
+    .owner .owner-name {
+      font-weight: 600;
+    }
+
+    .owner-name {
+      color: rgb(27, 54, 100);
+    }
+
+    .location, .description {
+        font-size: medium;
+        font-weight: 400;
+    }
+
+    .dates {
+        font-size: small;
+        color: #404040;
+    }
+
+    .summary {
+      font-size: medium;
+      border-top: 1px solid #404040;
+      margin-top: 8px;
+      // margin-bottom: 8px;
+      padding-top: 8px;
+    }
+
+    .github-link {
+      margin-top: 20px;
+      display: block;
+    }
 }
 
 .icon {
