@@ -59,8 +59,10 @@
                 <div class="card">
                     <div class="info">
                         ${img}
-                        <p class="title"> ${ fellow.name }</p>
-                        <p class="location"> ${ fellow.location }</p>
+                        <a href="/fellows/${fellow.name.replace(/ /g, '-')}">
+                            <p class="title"> ${ fellow.name }</p>
+                            <p class="location"> ${ fellow.location }</p>
+                        <a>
                         <div class="icon">
                             <a ${(!fellow.github) ? "hidden" : ""} href=${fellow.github}>
                                 <i class="fab fa-github fa-lg"></i>                    
