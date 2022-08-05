@@ -1,14 +1,38 @@
-- title: Online Shopping App
+- title: Weather Data Site
+  img: rainyday.jpeg
   event: MLH Prep Pod Project
   date: Fall 2021  - Batch 4.5
   page-name: project
+  owner: MLH August Prep Pod 2
+  summary: An website that shows weather updates and other cool things.
+  github: https://prep-22-aug-prep-2-project.netlify.app/
+
+- title: Online Shopping App
+  img: shopping.jpeg
+  event: MLH Prep Pod Project
+  date: Fall 2021  - Batch 4.5
+  page-name: project
+  owner: Ahmed Atwa
+  owner-page: ahmed-atwa
+  summary: An app that allows users to buy and sell items online.
+  github: https://google.com
 
 - title: Todo List
+  img: todo.jpeg
   event: MLH Prep Pod Project
   date: Fall 2021  - Batch 4.5
   page-name: project
+  owner: Yanna Lin
+  owner-page: yanna-lin
+  summary: An app that allows users to create and manage their todo lists.
+  github: https://google.com
 
 - title: iOS App
+  img: ios.jpeg
   event: MLH Prep Pod Project
   date: Fall 2021  - Batch 4.5
   page-name: project
+  owner: Zeyu Wang
+  owner-page: zeyu-wang
+  summary: An iOS app that allows users to create and manage stuff.
+  github: https://google.com

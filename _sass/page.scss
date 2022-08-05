@@ -101,9 +101,41 @@ hr {
     margin-bottom: 1em !important;
 }
 
+// .left-arrow a img {
+//     width: 4%; 
+//     height: 4%;
+//     margin-left: -60px; 
+//     margin-top: -3px;
+// }
+
+// .container {
+//     max-width: 550px;
+// }
+
+.left-arrow {
+    display: inline-block;
+    width: 40.95px; 
+    height: 40.95px;
+}
+
+.left-arrow img {
+    width: 40.95px; 
+    height: 40.95px;
+}
+
+.logo {
+    display: inline-block; 
+}
+
+.logo img {
+    width:150px;
+    height:60px;
+}
+
 @media screen and (max-width: 768px) {
     
     .banner {
+        display: flex;
         padding: 20px 0px 20px 0px;
         height: 110px;
     }
@@ -120,7 +152,7 @@ hr {
         font-size: 30px;
         font-weight: 700;
     }
-
+ 
     .page h1 {
         font-size: 1.5rem !important;
     }

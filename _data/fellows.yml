@@ -1,11 +1,9 @@
 - name: Ahmed Atwa
   img: AhmedAtwa.jpeg
   location: Cairo, Egypt
-  icons: [linkedin, twitter, resume, github] 
-  github: https://github.com/Deadreyo
-  twitter: https://twitter.com/MLHacks
-  resume: [link to resume]
-  linkedin: https://www.linkedin.com/company/major-league-hacking
+  github: Deadreyo
+  resume: https://drive.google.com/file/d/1CXeqwLKahvFYo-q4fAIeFB1udlIazOTn/view?usp=sharing
+  linkedin: ahmed-mohamed-atwa
   description: A programmer driven to create applications and solutions that helps people and make their life better. 
     Always learning, always adapting, always evolving. 
   favLangs: Typescript, C++
@@ -15,11 +13,9 @@
 - name: Ziad Gamalelden
   img: ZiadGamaleldin.jpg
   location: Tanta, Egypt
-  icons: [linkedin, twitter, resume, github] 
-  github: https://github.com/ZAK0EE
-  twitter: https://twitter.com/MLHacks
-  resume: [link to resume]
-  linkedin: https://www.linkedin.com/company/major-league-hacking
+  github: ZAK0EE
+  resume: https://drive.google.com/file/d/1aw9i6S0GuLulkY4nG28nVwxZGGxID3Pg/view?usp=sharing
+  linkedin: ziad-gamaleldin
   description: I'm a Computer and Automatic control Engineer,  mainly interested in low level programming and 
     specialized in Embedded systems. But also, I have experience with other fields such as Desktop applications 
     and Web development, and always eager to learn new things.
@@ -30,11 +26,7 @@
 - name: Omeir Fawaz
   img: OmeirFawaz.png
   location: New Delhi, India
-  icons: [linkedin, twitter, resume, github] 
-  github: https://github.com/omeiirr
-  twitter: https://twitter.com/MLHacks
-  resume: [link to resume]
-  linkedin: https://www.linkedin.com/company/major-league-hacking
+  github: omeiirr
   description: Passionate about software and all things tech 
   favLangs: TypeScript, Golang
   interests: Aviation
@@ -43,11 +35,7 @@
 - name: Jane Ling
   img: JaneLing.jpeg
   location: London, United Kingdom
-  icons: [linkedin, twitter, resume, github] 
-  github: https://github.com/jcyling
-  twitter: https://twitter.com/MLHacks
-  resume: [link to resume]
-  linkedin: https://www.linkedin.com/company/major-league-hacking
+  github: jcyling
   description: A self-taught software developer based in London, UK with a background in architecture and design.
   favLangs: JavaScript
   interests: Architecture & Design, Animations, 3D modelling
@@ -56,11 +44,8 @@
 - name: Yanna Lin
   img: YannaL.jpg
   location: Gainesville, Florda, USA
-  icons: [linkedin, twitter, resume, github] 
-  github: https://github.com/linyanna
-  twitter: https://twitter.com/MLHacks
-  resume: [link to resume]
-  linkedin: https://www.linkedin.com/company/major-league-hacking
+  github: linyanna
+  linkedin: yanna-lin
   description: Hi, I'm Yanna! I’m attending the University of Florida, studying Computer Science with a minor in Digital Arts
    and Sciences. I have worked on a range of school-related and personal software projects, 
    and I hope to keep learning and developing my skills as a software engineer.
@@ -73,11 +58,7 @@
 - name: Bevin Duncan
   img: BevinDuncan.jpg
   location: Seattle, WA, USA
-  icons: [linkedin, twitter, resume, github] 
-  github: https://github.com/bevin-duncan
-  twitter: https://twitter.com/MLHacks
-  resume: [link to resume]
-  linkedin: https://www.linkedin.com/company/major-league-hacking
+  github: bevin-duncan
   description:   
     I am a freshly-leavened software developer--recently graduated from Flatiron School-- 
     experienced in Ruby on Rails and JavaScript based programming with a background in data science, 
@@ -92,11 +73,7 @@
 - name: Grace Gong
   img: GraceGong.jpeg
   location: Toronto, Canada
-  icons: [linkedin, twitter, resume, github] 
-  github: https://github.com/ggongg
-  twitter: https://twitter.com/MLHacks
-  resume: [link to resume]
-  linkedin: https://www.linkedin.com/company/major-league-hacking
+  github: ggongg
   description: Incoming Junior at Western University in Computer Science and Business. 
     Global Wholesale Operations Intern at Scotiabank. 
   favLangs: Javascript
@@ -106,11 +83,7 @@
 - name: Wisdom Ekpotu
   img: WisdomEkpotu.jpg
   location: Port-Harcourt, Nigeria
-  icons: [linkedin, twitter, resume, github] 
-  github: https://github.com/wisdomekpotu
-  twitter: https://twitter.com/MLHacks
-  resume: [link to resume]
-  linkedin: https://www.linkedin.com/company/major-league-hacking
+  github: wisdomekpotu
   description: Wisdom Ekpotu is a Software Engineer and a Technical writer based in Nigeria. 
     He is passionate about web technologies, open-source, and building communities.
   favLangs: Javascript  and Java
@@ -120,11 +93,9 @@
 - name: Zeyu Wang
   img: ZeyuWang.png
   location: Los Angeles, CA, USA
-  icons: [linkedin, twitter, resume, github] 
-  github: https://github.com/wzy0766
-  twitter: https://twitter.com/MLHacks
-  resume: [link to resume]
-  linkedin: https://www.linkedin.com/company/major-league-hacking
+  github: wzy0766
+  resume: https://drive.google.com/file/d/19MfRIAOqgcHL_p6s7ULit5nuSJtsOuLv/view?usp=sharing
+  linkedin: zwang0431
   description: Zeyu is a self-driven team player intertwined with strong computer skills.
   favLangs: Java/Python/JavaScript
   interests: Cooking, Traveling, Video Games
@@ -133,11 +104,10 @@
 - name: Ahmed Saed
   img: AhmedSaed.png
   location: 6th October City, Egypt
-  icons: [linkedin, twitter, resume, github] 
-  github: https://github.com/Ahmedsaed
-  twitter: https://twitter.com/MLHacks
-  resume: [link to resume]
-  linkedin: https://www.linkedin.com/company/major-league-hacking
+  github: Ahmedsaed
+  twitter: ahmed_saed26
+  resume: https://mustedueg-my.sharepoint.com/:f:/g/personal/200013206_must_edu_eg/EkYGE5zXbPFKqjlKKsMo1EQBP6MtMxgiZJpEMtWN4WZJig?e=teSl5S
+  linkedin: ahmedsaed26
   description: I write code 😉
   favLangs: Rust, Python
   interests: Tennis, Music
@@ -146,11 +116,8 @@
 - name: Keaton Martin
   img: Keaton.png
   location: Versailles, KY, USA
-  icons: [linkedin, twitter, resume, github] 
-  github: https://github.com/keatonmartin
-  twitter: https://twitter.com/MLHacks
-  resume: [link to resume]
-  linkedin: https://www.linkedin.com/company/major-league-hacking
+  github: keatonmartin
+  linkedin: keaton-martin
   description: Hello! I am Keaton, a computer science student from Versailles, Kentucky! I am a 
     rising sophomore at the University of Kentucky. 
   favLangs: Python, C++
@@ -161,11 +128,7 @@
 - name: Yuehan Wang
   img: YuehanWang.jpeg
   location: Chicago, USA
-  icons: [linkedin, twitter, resume, github] 
-  github: https://github.com/Yuehan-Wang
-  twitter: https://twitter.com/MLHacks
-  resume: [link to resume]
-  linkedin: https://www.linkedin.com/company/major-league-hacking
+  github: Yuehan-Wang
   description: testing
   favLangs: testing
   interests: testing
@@ -174,11 +137,8 @@
 - name: Shengyuan Lu
   img: ShengyuanLu.png
   location: Irvine, CA, USA
-  icons: [linkedin, twitter, resume, github] 
-  github: https://github.com/shengyuan-lu
-  twitter: https://twitter.com/MLHacks
-  resume: [link to resume]
-  linkedin: https://www.linkedin.com/company/major-league-hacking
+  github: shengyuan-lu
+  linkedin: shengyuan-lu
   description: I am an engineer by training, a software developer by profession, and a creative artist at heart.
   favLangs: Swift
   interests: Video Editing, Graphic Design
@@ -187,12 +147,22 @@
 - name: Fareeda Ragab
   img: Farida.jpg
   location: Alexandria, Egypt
-  icons: [linkedin, twitter, resume, github] 
-  github: https://github.com/farida52369
-  twitter: https://twitter.com/MLHacks
-  resume: [link to resume]
-  linkedin: https://www.linkedin.com/company/major-league-hacking
+  github: farida52369
+  twitter: fareeda_ragab
+  resume: https://drive.google.com/file/d/1xHOLo_xyYnsJbRV7tICN0RfzZvPqyDfD/view?usp=sharing
+  linkedin: fareeda-ragab
   description: interested in Programming, and Cinema
   favLangs: Java, Python
   interests: Cinema
   university: Faculty of Engineering, Alex University, Egypt
+
+- name: Phong Nguyen
+  img: PhongNguyen.jpg
+  location: Austin, USA
+  github: farida52369
+  resume: https://drive.google.com/file/d/18sS7fzbcXDPnY_2NHLXeQFazNdsG0CVC/view?usp=sharing
+  linkedin: julian-phong-nguyen
+  description: Unfilled
+  favLangs: Unfilled
+  interests: Unfilled
+  university: Unfilled
