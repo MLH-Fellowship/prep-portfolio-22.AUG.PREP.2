@@ -144,20 +144,24 @@ a {
     }  
   }
 
-  .icon {
-    margin-top: 20px;
-  
-    flex-wrap: wrap;
-    flex-direction: column;
-    display: flexbox;
-  
-    .social-link-icon {
-      width: 8%;
-      height: 8%;
-    }
-  
-    a {
-      padding-right: 2px;
-    }
+.icon {
+  margin-top: 20px;
 
+  flex-wrap: wrap;
+  flex-direction: column;
+  display: flexbox;
+
+  .social-link-icon {
+    width: 8%;
+    height: 8%;
   }
+
+  a {
+    padding-right: 2px;
+  }
+
+}
+
+.site-title {
+  padding-bottom: 15px;
+}
