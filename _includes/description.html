@@ -113,7 +113,13 @@
                                 <i class="fab fa-linkedin-in fa-lg" style="color: #0A66C2;"></i>
                             </a>
                         </div>
-                        <p class="card-score">Score: ${ fellow.total }</p>
+                        <p class="card-score">Score: ${ fellow.total }
+                        <span class="card-score-breakdown">
+                        Commits: ${fellow.commits}<br>
+                        Pull requests: ${fellow.pullRequests}<br>
+                        Issues: ${fellow.issues}<br>
+                        Comments: ${fellow.comments}<br>
+                        </span></p>
                     </div>
                 </div>
                 `

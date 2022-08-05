@@ -77,6 +77,27 @@ h2 {
   padding: 1px 3px;
 }
 
+.card-score .card-score-breakdown {
+  visibility: hidden;
+  background-color: rgb(75, 75, 75);
+  font-size: 70%;
+  width: 140%;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -50%;
+  margin-top: 5px;
+  z-index: 1;
+}
+
+.card-score:hover .card-score-breakdown {
+  visibility: visible;
+}
+
 a {
     color: black;
     cursor: pointer;
