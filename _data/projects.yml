@@ -1,3 +1,12 @@
+- title: Weather Data Site
+  img: rainyday.jpeg
+  event: MLH Prep Pod Project
+  date: Fall 2021  - Batch 4.5
+  page-name: project
+  owner: person4
+  summary: An website that shows weather updates and other cool things.
+  github: https://prep-22-aug-prep-2-project.netlify.app/
+
 - title: Online Shopping App
   img: shopping.jpeg
   event: MLH Prep Pod Project
