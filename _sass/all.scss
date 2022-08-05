@@ -58,6 +58,16 @@ h2 {
     padding: 1.5em;
     font-size: 1.2em;
 }
+.card img {
+  max-width: 100%;
+  border-radius: .15rem;
+  margin-bottom: .5em;
+}
+
+.card:hover {
+  transform:scale(1.05);
+  transition:transform 0.5s;
+}
 
 a {
     color: black;
