@@ -18,29 +18,22 @@
             });
         {% endfor %}
 
-        // get commit data from github
-        async function getCommitData( url ) {
+        // get data from github
+        async function getData( url ) {
             const res = await fetch( url );
-            const data = await res.json();
+            const data = res.json();
             return data;
         }
 
-        getCommitData( commitUrl ).then(data => {
-            userCommits = data.map((elem, index) => {
-            return {github: elem.author.html_url, total: elem.total}
-            });
-
-            for ( const user of userCommits ) { // iterate through commit data
-                for ( const fellow of fellows ) {
-                    if (user.github == fellow.github) { // if github username matches a name in fellows.yml, update total
-                        fellow.total = user.total;
-                        continue;
-                    }
-                }
+        getData(commitUrl).then(data => {
+            let commitData = data.reduce((obj, item) => (obj[item.author.html_url] = item.total, obj) ,{});
+            
+            for (const fellow of fellows) {
+                fellow.total = (!commitData[fellow.github]) ? 0 : commitData[fellow.github];
             }
-
-            fellows.sort( (a,b) => {
-                return ( a.total > b.total ? -1 : (b.total > a.total ? 1 : 0 ));
+            
+            fellows.sort((a, b) => {
+                return (a.total < b.total) ? 1 : ((b.total < a.total) ? -1 : 0);
             }); // sort fellows based on total commits
 
             const cardContainer = document.getElementsByClassName('card-container')[0];
@@ -52,7 +45,7 @@
                 let img = '';
 
                 if (lock && lock--) {
-                    img = `<img src="../assets/img/icons/crown${3-lock}.png" class="card-badge" />`;
+                    img = `<img src="./assets/img/icons/crown${3-lock}.png" class="card-badge" />`;
                 }
 
                 let cardHTML = `
@@ -71,7 +64,7 @@
                                 <i class="fab fa-twitter fa-lg" style="color: #1DA1F2;"></i>                
                             </a>
                             <a ${(!fellow.resume) ? "hidden" : ""} href=${fellow.resume}>
-                                <img class="social-link-icon" src="../assets/img/icons/resume.png">
+                                <img class="social-link-icon" src="./assets/img/icons/resume.png">
                             </a>
                             <a ${(!fellow.linkedin) ? "hidden" : ""} href=${fellow.linkedin}>
                                 <i class="fab fa-linkedin-in fa-lg" style="color: #0A66C2;"></i>
