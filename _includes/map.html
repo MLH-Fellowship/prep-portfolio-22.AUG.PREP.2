@@ -1,0 +1,191 @@
+<div id="map"></div>
+
+
+<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+  integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+  crossorigin=""></script>
+
+<script>
+  const map = L.map('map', { scrollWheelZoom: false }).setView([13.581921, -38.320312], 2);
+
+  const basemaps = {
+    StreetView: L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }),
+    Topography: L.tileLayer.wms('http://ows.mundialis.de/services/service?', { layers: 'TOPO-WMS' }),
+    Places: L.tileLayer.wms('http://ows.mundialis.de/services/service?', { layers: 'OSM-Overlay-WMS' })
+  };
+
+  L.control.layers(basemaps).addTo(map);
+
+  basemaps.StreetView.addTo(map);
+
+
+  const marker1 = L.marker([4.815554, 7.049844])
+    .bindPopup(
+      `<div>
+  <img src="./assets/img/WisdomEkpotu.jpg" style="width:100%">
+  <h6>Wisdom Ekpotu</h6>
+  <strong>
+  Port-Harcourt, Nigeria <br/>
+ University of Uyo
+ </strong>
+</div>`)
+    .addTo(map);
+
+
+  const marker2 = L.marker([47.6038321, -122.330062])
+    .bindPopup(
+      `<div>
+  <img src="./assets/img/BevinDuncan.jpg" style="width:100%" >
+  <h6>Bevin Duncan</h6>
+  <strong>
+   Seattle, WA, USA<br/>
+   Flatiron School
+ </strong>
+</div>`)
+    .addTo(map);
+
+
+  const marker3 = L.marker([29.9723458, 30.9409205])
+    .bindPopup(
+      `<div>
+  <img src="./assets/img/AhmedSaed.png"  style="width:100%">
+  <h6>Ahmed Saed</h6>
+  <strong>
+    6th October City, Egypt<br/>
+    Misr University For Science And Technology
+ </strong>
+</div>`)
+    .addTo(map);
+
+
+  const marker4 = L.marker([30.7833666, 30.9982536])
+    .bindPopup(
+      `<div>
+  <img src="./assets/img/ZiadGamaleldin.jpg"  style="width:100%">
+  <h6>Ziad Gamalelden</h6>
+  <strong>
+    Tanta, Egypt<br/>
+    Faculty of Engineering, Tanta University
+ </strong>
+</div>`)
+    .addTo(map);
+
+  const marker5 = L.marker([51.5073219, -0.1276474])
+    .bindPopup(
+      `<div>
+  <img src="./assets/img/janeLing.jpeg"  style="width:100%">
+  <h6>Jane Ling</h6>
+  <strong>
+    London, United Kingdom<br/>
+    University of Manchester
+ </strong>
+</div>`)
+    .addTo(map);
+
+  const marker6 = L.marker([33.6856969, -117.8259819])
+    .bindPopup(
+      `<div>
+  <img src="./assets/img/ShengyuanLu.png"  style="width:100%">
+  <h6>Shengyuan Lu</h6>
+  <strong>
+    Irvine, CA, USA<br/>
+    University of California, Irvine
+ </strong>
+</div>`)
+    .addTo(map);
+
+  const marker7 = L.marker([31.199004, 29.894378])
+    .bindPopup(
+      `<div>
+  <img src="./assets/img/Farida.jpg"  style="width:100%">
+  <h6>Fareeda Ragab</h6>
+  <strong>
+    Alexandria, Egypt<br/>
+    Faculty of Engineering, Alex University
+ </strong>
+</div>`)
+    .addTo(map);
+
+  const marker8 = L.marker([38.052576, -84.7299464])
+    .bindPopup(
+      `<div>
+  <img src="./assets/img/Keaton.png"  style="width:100%">
+  <h6>Keaton Martin</h6>
+  <strong>
+    Versailles, KY, USA<br/>
+    University of Kentucky
+ </strong>
+</div>`)
+    .addTo(map);
+
+  const marker9 = L.marker([41.8755616, -87.6244212])
+    .bindPopup(
+      `<div>
+  <img src="./assets/img/YuehanWang.jpg"  style="width:100%">
+  <h6>Yuehan Wang</h6>
+  <strong>
+    Chicago, USA<br/>
+ </strong>
+</div>`)
+    .addTo(map);
+
+  const marker10 = L.marker([41.350616, -74.353532])
+    .bindPopup(
+      `<div>
+  <img src="./assets/img/YannaL.jpg"  style="width:100%">
+  <h6>Yanna Lin</h6>
+  <strong>
+    Gainesville, Florda, USA<br/>
+    University of Florida
+ </strong>
+</div>`)
+    .addTo(map);
+
+  const marker11 = L.marker([29.652000427246094, -82.32339477539062])
+    .bindPopup(
+      `<div>
+  <img src="./assets/img/ZeyuWang.png" style="width:100%" >
+  <h6>Zeyu Wang</h6>
+  <strong>
+    Los Angeles, CA, USA<br/>
+    University of Southern California
+ </strong>
+</div>`)
+    .addTo(map);
+
+  const marker12 = L.marker([28.6138954, 77.2090057])
+    .bindPopup(
+      `<div>
+  <img src="./assets/img/OmeirFawaz.png"  style="width:100%">
+  <h6>Omeir Fawaz</h6>
+  <strong>
+    New Delhi, India<br/>
+    Amity University
+ </strong>
+</div>`)
+    .addTo(map);
+
+  const marker13 = L.marker([30.0443879, 31.2357257])
+    .bindPopup(
+      `<div>
+  <img src="./assets/img/AhmedAtwa.jpeg"  style="width:100%">
+  <h6>Ahmed Atwa</h6>
+  <strong>
+    Cairo, Egypt<br/>
+    Ain Shams University
+ </strong>
+</div>`)
+    .addTo(map);
+
+  const marker14 = L.marker([43.6534817, -79.3839347])
+    .bindPopup(
+      `<div>
+  <img src="./assets/img/GraceGong.jpeg" style="width:100%" >
+  <h6>Grace Gong</h6>
+  <strong>
+    Toronto, Canada<br/>
+    Western University
+ </strong>
+</div>`)
+    .addTo(map);
+</script>
