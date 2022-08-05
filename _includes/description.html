@@ -46,11 +46,31 @@
             },
             {});
             
+            // count created issues and PRs (opened ones) per user
+            const rawOpenedIssuesData = await getData("https://api.github.com/repos/MLH-Fellowship/prep-portfolio-22.AUG.PREP.2/issues")
+            
+            let openedIssuesData = rawOpenedIssuesData.reduce((obj, item) => {
+                let prs = 0, issues = 0;
+                
+                prs = ((obj[item.user.html_url]) ? obj[item.user.html_url][0] : 0) + (item.pull_request != undefined)
+                issues = ((obj[item.user.html_url]) ? obj[item.user.html_url][1] : 0) + !(item.pull_request != undefined)
+                
+                return (obj[item.user.html_url] = [prs, issues], obj)
+            },
+            {});
+
             // Assign the number to each fellow and calculate total score
             for (const fellow of fellows) {
                 fellow.commits = (!commitData[fellow.github]) ? 0 : commitData[fellow.github];
-                fellow.pullRequests = !(closedIssuesData[fellow.github]) ? 0 : closedIssuesData[fellow.github][0];
-                fellow.issues = !(closedIssuesData[fellow.github]) ? 0 : closedIssuesData[fellow.github][1];
+                
+                let closedPRs = !(closedIssuesData[fellow.github]) ? 0 : closedIssuesData[fellow.github][0],
+                    closedIusses = !(closedIssuesData[fellow.github]) ? 0 : closedIssuesData[fellow.github][1],
+                    openedPRs = !(openedIssuesData[fellow.github]) ? 0: openedIssuesData[fellow.github][0],
+                    openedIssues = !(openedIssuesData[fellow.github]) ? 0: openedIssuesData[fellow.github][1];
+
+                fellow.pullRequests = closedPRs + openedPRs;
+                fellow.issues = closedIusses + openedIssues;
+                
                 fellow.comments = 0; // TODO
                 fellow.total = fellow.commits + fellow.pullRequests + fellow.issues + fellow.comments;
             }
