@@ -8,17 +8,23 @@
           {% else %}
           <a>
           {% endif %}
-          <p class="title">{{ item.title }}</p>
+            <img src="./assets/img/{{ item.img }}">
+            <p class="title">{{ item.title }}</p>
+          </a>
           <p class="owner">By <span class="owner-name">{{ item.owner }}</span></p>
           <p class="location">{{ item.event }}</p>
           <p class="dates">{{ item.date }}</p>
           <p class="summary">{{ item.summary }}</p>
           </a>
           {% if item.github %}
-          <a class="github-link" target="_blank" href="{{ item.github }}">Link to repo</a>
+          <div class="icon">
+            <a class="github-link" target="_blank" href="{{ item.github }}">
+                <i class="fab fa-github fa-lg"></i>  
+                Github Repository                  
+            </a>
+          </div>
           {% endif %}
         </div>
       </div>
-    </a>
     {% endfor %}
 </div>

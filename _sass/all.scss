@@ -35,7 +35,7 @@ html {
 }
 
 body {
-    background-color: #f5f5f9;
+    background-color: white;
     min-height: 100vh;
     position: relative;
     /* margin-bottom: 50px; */
@@ -53,14 +53,43 @@ h2 {
     flex-direction: row;
     align-items: center;
     margin: 20px 30px;
-    background-color: white;
+    background-color: #e9e9f3;
     border-radius: .375rem;
     padding: 1.5em;
     font-size: 1.2em;
 }
+.card img {
+  max-width: 100%;
+  border-radius: .15rem;
+  margin-bottom: .5em;
+}
+
+.card:hover {
+  transform:scale(1.05);
+  transition:transform 0.5s;
+}
+
+.card-badge {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  transform: rotate(45deg);
+}
+
+.card-score {
+  position: absolute;
+  right: 10px;
+  top: 60%;
+  background-color: #bbb;
+  border-radius: 5px;
+  padding: 1px 3px;
+}
 
 a {
     color: black;
+    cursor: pointer;
 }
 
 .info {
@@ -77,12 +106,12 @@ a {
 
     .owner {
       font-size: 0.8em;
-      margin-top: -8px;
+      margin-top: -4px;
       margin-bottom: 10px;
     }
 
     .owner-name {
-      color: green;
+      color: rgb(27, 54, 100);
     }
 
     .location, .description {
@@ -96,15 +125,16 @@ a {
     }
 
     .summary {
+      font-size: medium;
       border-top: 1px solid #404040;
       margin-top: 8px;
+      // margin-bottom: 8px;
       padding-top: 8px;
     }
 
     .github-link {
-      margin-top: 40px;
+      margin-top: 20px;
       display: block;
-      color: blueviolet;
     }
 }
 
@@ -114,7 +144,11 @@ a {
   display: flexbox;
   
   .social-link-icon {
-    width: 10%;
-    height: 10%;
+    width: 8%;
+    height: 8%;
+  }
+
+  a {
+    padding-right: 2px;
   }
 }
