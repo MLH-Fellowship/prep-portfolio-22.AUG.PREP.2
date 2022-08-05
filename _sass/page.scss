@@ -101,19 +101,35 @@ hr {
     margin-bottom: 1em !important;
 }
 
-.container a img {
+// .left-arrow a img {
+//     width: 4%; 
+//     height: 4%;
+//     margin-left: -60px; 
+//     margin-top: -3px;
+// }
+
+// .container {
+//     max-width: 550px;
+// }
+
+.left-arrow {
     display: inline-block;
-    // width: 4%; 
-    // height: 4%;      
-    // margin-left: -60px; 
-    // margin-top: -3px;
+    width: 40.95px; 
+    height: 40.95px;
 }
 
-.container .left-arrow a img {
-    width: 4%; 
-    height: 4%;
-    margin-left: -60px; 
-    margin-top: -3px;
+.left-arrow img {
+    width: 40.95px; 
+    height: 40.95px;
+}
+
+.logo {
+    display: inline-block; 
+}
+
+.logo img {
+    width:150px;
+    height:60px;
 }
 
 @media screen and (max-width: 768px) {
