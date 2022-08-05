@@ -3,13 +3,14 @@
 @import 'navbar';
 @import 'profile';
 @import 'page';
+@import 'map';
 @import 'footer';
 
 .card-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    font-family: "Open Sans", sans-serif;
-    margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 50px;
 }
 
 @media only screen and (max-width: 1500px) {
@@ -31,32 +32,32 @@
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: white;
-    min-height: 100vh;
-    position: relative;
-    /* margin-bottom: 50px; */
+  background-color: white;
+  min-height: 100vh;
+  position: relative;
+  /* margin-bottom: 50px; */
 }
 
 h2 {
-    margin-bottom: 20px;
-    margin-top: 20px;
-    font-weight: 700;
-    text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-weight: 700;
+  text-align: center;
 }
 
 .card {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 20px 30px;
-    background-color: #e9e9f3;
-    border-radius: .375rem;
-    padding: 1.5em;
-    font-size: 1.2em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px 30px;
+  background-color: #e9e9f3;
+  border-radius: 0.375rem;
+  padding: 1.5em;
+  font-size: 1.2em;
 }
 
 .card-badge {
@@ -78,38 +79,39 @@ h2 {
 }
 
 a {
-    color: black;
-    cursor: pointer;
+  color: black;
+  cursor: pointer;
 }
 
 .info {
-    p {
-        margin-top: 5px;
-        margin: 0px;
-        text-align: left;
-    }
+  p {
+    margin-top: 5px;
+    margin: 0px;
+    text-align: left;
+  }
 
-    .title {
-        font-size: 500;
-        font-weight: bold;
-    }
+  .title {
+    font-size: 500;
+    font-weight: bold;
+  }
 
-    .location, .description {
-        font-size: medium;
-        font-weight: 400;
-    }
+  .location,
+  .description {
+    font-size: medium;
+    font-weight: 400;
+  }
 
-    .dates {
-        font-size: small;
-        color: #404040;
-    }
+  .dates {
+    font-size: small;
+    color: #404040;
+  }
 }
 
 .icon {
   flex-wrap: wrap;
   flex-direction: column;
   display: flexbox;
-  
+
   .social-link-icon {
     width: 8%;
     height: 8%;
