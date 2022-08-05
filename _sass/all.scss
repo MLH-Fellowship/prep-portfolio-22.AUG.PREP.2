@@ -106,12 +106,12 @@ a {
 
     .owner {
       font-size: 0.8em;
-      margin-top: -8px;
+      margin-top: -4px;
       margin-bottom: 10px;
     }
 
     .owner-name {
-      color: green;
+      color: rgb(27, 54, 100);
     }
 
     .location, .description {
@@ -125,15 +125,16 @@ a {
     }
 
     .summary {
+      font-size: medium;
       border-top: 1px solid #404040;
       margin-top: 8px;
+      // margin-bottom: 8px;
       padding-top: 8px;
     }
 
     .github-link {
-      margin-top: 40px;
+      margin-top: 20px;
       display: block;
-      color: blueviolet;
     }
 }
 
