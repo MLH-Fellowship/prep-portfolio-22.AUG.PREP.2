@@ -59,6 +59,7 @@ h2 {
   padding: 1.5em;
   font-size: 1.2em;
 }
+
 .card img {
   max-width: 100%;
   border-radius: .15rem;
@@ -66,8 +67,9 @@ h2 {
 }
 
 .card:hover {
-  transform:scale(1.05);
-  transition:transform 0.5s;
+  transform: scale(1.05);
+  transition: transform 0.5s;
+  z-index: 1;
 }
 
 .card-badge {
@@ -90,19 +92,23 @@ h2 {
 
 .card-score .card-score-breakdown {
   visibility: hidden;
+
   background-color: rgb(75, 75, 75);
-  font-size: 70%;
-  width: 140%;
   color: #fff;
-  text-align: left;
-  border-radius: 6px;
+  
+  width: 110px;
   padding: 5px;
+  
+  font-size: 70%;
+  text-align: left;
+  
+  border-radius: 6px;
+
   position: absolute;
   top: 100%;
-  left: 50%;
-  margin-left: -50%;
+  left: 0%;
   margin-top: 5px;
-  z-index: 1;
+  z-index: 2;
 }
 
 .card-score:hover .card-score-breakdown {
