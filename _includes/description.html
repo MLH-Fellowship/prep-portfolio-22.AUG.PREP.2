@@ -1,83 +1,103 @@
 <h2>Meet the Pod</h2>
 <div id="members" class="card-container">
     <script>
-        let fellows = []; // initialize array holding fellows
-
-        // extract github usernames from fellows.yml
-        {% for item in site.data.fellows %} 
-            fellows.push({
-                github: "https://github.com/{{ item.github }}",
-                name: "{{ item.name }}",
-                location: "{{ item.location }}",
-                linkedin: "https://www.linkedin.com/in/{{ item.linkedin }}",
-                twitter: "https://twitter.com/{{ item.twitter }}",
-                resume: "{{ item.resume }}",
-                commits: 0,
-                pullRequests: 0,
-                issues: 0,
-                comments: 0,
-                total: 0.
-            });
-        {% endfor %}
-
-        // get data from github
+        // A helper function to get data from github API
         async function getData(url) {
             const res = await fetch( url );
             const data = res.json();
             return data;
         }
 
-        async function computeScore() {
-            // count totoal commits per user
-            const rawCommitdata = await getData("https://api.github.com/repos/MLH-Fellowship/prep-portfolio-22.AUG.PREP.2/stats/contributors");
+        // Compute the score for each fellow based on the amount of contributions.
+        async function computeScore(fellows, repo_owner, repo_name) {
+            // Helper function to compute Issues/PR score
+            function computeIssuesScore(obj, item) {
+                let isPR = 0;
 
-            let commitData = rawCommitdata.reduce((obj, item) => (obj[item.author.html_url] = item.total, obj) ,{});
+                // Determine if the issue is a PR or not (Because Github treats PRs as issues too)
+                isPR = (item.pull_request != undefined) + 0
+
+                // Score for Issue/PR Author (Increase the score by 1 if it's not initialized otherwise initialize it to 1)   
+                obj[item.user.html_url] = [
+                    ((obj[item.user.html_url]) ? obj[item.user.html_url][0] : 0) + isPR, 
+                    ((obj[item.user.html_url]) ? obj[item.user.html_url][1] : 0) + !isPR
+                ]
+
+                // Score for assigned fellows to the Issue/PR (Increase the score by 1 if it's not initialized otherwise initialize it to 1)
+                for (let assignee of item.assignees) {
+                    // Don't increase the score of the Author again
+                    if (assignee.html_url != item.user.html_url) {
+                        obj[assignee.html_url] = [
+                            ((obj[assignee.html_url]) ? obj[assignee.html_url][0] : 0) + isPR,
+                            ((obj[assignee.html_url]) ? obj[assignee.html_url][1] : 0) + !isPR
+                        ]
+                    }
+                    
+                }
+
+                return obj;
+            }
+
+            // count total commits per user
+            const rawCommitData = await getData(`https://api.github.com/repos/${repo_owner}/${repo_name}/stats/contributors`);
+
+            let commitData = rawCommitData.reduce((obj, item) => (obj[item.author.html_url] = item.total, obj) ,{});
 
             // count created issues and PRs (closed ones) per user
-            const rawClosedIssuesData = await getData("https://api.github.com/repos/MLH-Fellowship/prep-portfolio-22.AUG.PREP.2/issues?state=closed")
-            
-            let closedIssuesData = rawClosedIssuesData.reduce((obj, item) => {
-                let prs = 0, issues = 0;
-                
-                prs = ((obj[item.user.html_url]) ? obj[item.user.html_url][0] : 0) + (item.pull_request != undefined)
-                issues = ((obj[item.user.html_url]) ? obj[item.user.html_url][1] : 0) + !(item.pull_request != undefined)
-                
-                return (obj[item.user.html_url] = [prs, issues], obj)
-            },
-            {});
-            
-            // count created issues and PRs (opened ones) per user
-            const rawOpenedIssuesData = await getData("https://api.github.com/repos/MLH-Fellowship/prep-portfolio-22.AUG.PREP.2/issues")
-            
-            let openedIssuesData = rawOpenedIssuesData.reduce((obj, item) => {
-                let prs = 0, issues = 0;
-                
-                prs = ((obj[item.user.html_url]) ? obj[item.user.html_url][0] : 0) + (item.pull_request != undefined)
-                issues = ((obj[item.user.html_url]) ? obj[item.user.html_url][1] : 0) + !(item.pull_request != undefined)
-                
-                return (obj[item.user.html_url] = [prs, issues], obj)
-            },
-            {});
+            const rawClosedIssuesData = await getData(`https://api.github.com/repos/${repo_owner}/${repo_name}/issues?state=closed&per_page=99`)
 
-            // Assign the number to each fellow and calculate total score
+            let closedIssuesData = rawClosedIssuesData.reduce((obj, item) => computeIssuesScore(obj, item), {});
+
+            // count created issues and PRs (opened ones) per user
+            const rawOpenedIssuesData = await getData(`https://api.github.com/repos/${repo_owner}/${repo_name}/issues`)
+            
+            let openedIssuesData = rawOpenedIssuesData.reduce((obj, item) => computeIssuesScore(obj, item), {});
+
+            // Assign the score to each fellow and calculate total score
             for (const fellow of fellows) {
-                fellow.commits = (!commitData[fellow.github]) ? 0 : commitData[fellow.github];
+                fellow.commits += (!commitData[fellow.github]) ? 0 : commitData[fellow.github];
                 
                 let closedPRs = !(closedIssuesData[fellow.github]) ? 0 : closedIssuesData[fellow.github][0],
-                    closedIusses = !(closedIssuesData[fellow.github]) ? 0 : closedIssuesData[fellow.github][1],
+                    closedIssues = !(closedIssuesData[fellow.github]) ? 0 : closedIssuesData[fellow.github][1],
                     openedPRs = !(openedIssuesData[fellow.github]) ? 0: openedIssuesData[fellow.github][0],
                     openedIssues = !(openedIssuesData[fellow.github]) ? 0: openedIssuesData[fellow.github][1];
 
-                fellow.pullRequests = closedPRs + openedPRs;
-                fellow.issues = closedIusses + openedIssues;
+                fellow.pullRequests += closedPRs + openedPRs;
+                fellow.issues += closedIssues + openedIssues;
                 
-                fellow.comments = 0; // TODO
-                fellow.total = fellow.commits + fellow.pullRequests + fellow.issues + fellow.comments;
+                fellow.comments += 0; // TODO
+                fellow.total += fellow.commits + fellow.pullRequests + fellow.issues + fellow.comments;
             }
 
             fellows.sort((a, b) => {
                 return (a.total < b.total) ? 1 : ((b.total < a.total) ? -1 : 0);
             }); // sort fellows based on total commits
+
+            return fellows
+        }
+
+        async function createFellowCards() {
+            let fellowsData = []; // initialize array holding fellows
+
+            // extract github usernames from fellows.yml
+            {% for item in site.data.fellows %} 
+                fellowsData.push({
+                    github: "https://github.com/{{ item.github }}",
+                    name: "{{ item.name }}",
+                    location: "{{ item.location }}",
+                    linkedin: "https://www.linkedin.com/in/{{ item.linkedin }}",
+                    twitter: "https://twitter.com/{{ item.twitter }}",
+                    resume: "{{ item.resume }}",
+                    commits: 0,
+                    pullRequests: 0,
+                    issues: 0,
+                    comments: 0,
+                    total: 0.
+                });
+            {% endfor %}
+
+
+            const fellows = await computeScore(fellowsData, "MLH-Fellowship", "prep-portfolio-22.AUG.PREP.2");
 
             const cardContainer = document.getElementsByClassName('card-container')[0];
 
@@ -129,6 +149,6 @@
             cardContainer.innerHTML += fellowsHTML;
         }
 
-        computeScore();
+        createFellowCards();
     </script>
 </div>
