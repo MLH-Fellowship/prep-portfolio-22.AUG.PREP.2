@@ -76,12 +76,13 @@
             return fellows
         }
 
+        // Create fellows' Cards and render them 
         async function createFellowCards() {
-            let fellowsData = []; // initialize array holding fellows
+            let fellows = []; // initialize array holding fellows
 
             // extract github usernames from fellows.yml
             {% for item in site.data.fellows %} 
-                fellowsData.push({
+                fellows.push({
                     github: "https://github.com/{{ item.github }}",
                     name: "{{ item.name }}",
                     location: "{{ item.location }}",
@@ -96,8 +97,14 @@
                 });
             {% endfor %}
 
-
-            const fellows = await computeScore(fellowsData, "MLH-Fellowship", "prep-portfolio-22.AUG.PREP.2");
+            
+            const repos = [
+                {owner: "MLH-Fellowship", name: "prep-portfolio-22.AUG.PREP.2"},
+            ]
+            
+            for (repo of repos) {
+                fellows = await computeScore(fellows, repo.owner, repo.name);
+            }
 
             const cardContainer = document.getElementsByClassName('card-container')[0];
 
