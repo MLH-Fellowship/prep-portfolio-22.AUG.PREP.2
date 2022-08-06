@@ -15,8 +15,8 @@ body {
 }
 
 .banner {
-    padding: 20px 0px 50px 0px;
-    height: 150px;
+    padding: 20px 0px 10px 0px;
+    height: fit-content;
     background-color: #1d539f;
 }
 
@@ -101,9 +101,41 @@ hr {
     margin-bottom: 1em !important;
 }
 
+// .left-arrow a img {
+//     width: 4%; 
+//     height: 4%;
+//     margin-left: -60px; 
+//     margin-top: -3px;
+// }
+
+// .container {
+//     max-width: 550px;
+// }
+
+.left-arrow {
+    display: inline-block;
+    width: 40.95px; 
+    height: 40.95px;
+}
+
+.left-arrow img {
+    width: 40.95px; 
+    height: 40.95px;
+}
+
+.logo {
+    display: inline-block; 
+}
+
+.logo img {
+    width:150px;
+    height:60px;
+}
+
 @media screen and (max-width: 768px) {
     
     .banner {
+        display: flex;
         padding: 20px 0px 20px 0px;
         height: 110px;
     }
@@ -120,7 +152,7 @@ hr {
         font-size: 30px;
         font-weight: 700;
     }
-
+ 
     .page h1 {
         font-size: 1.5rem !important;
     }
@@ -131,5 +163,20 @@ hr {
     
     .page h4 {
         font-size: 0.8rem !important;
+    }
+}
+
+.title-with-image {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 30px;
+
+    .image img {
+        width: 100px;
+        height: 100px;
+        border-radius: 20px;
+        margin-right: 20px;
+        object-fit: cover;
     }
 }
