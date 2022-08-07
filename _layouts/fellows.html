@@ -13,27 +13,43 @@ layout: default
             <div class="image">
                 <img src="../assets/img/{{page.img}}">
             </div>
-            <div class="title">
-                {{page.title}}
+            <div>
+                <div class="title">
+                    {{page.title}}
+                </div>
+                <div class="icon">
+                    <a href=https://github.com/${fellow.github} target="_blank">
+                        <i class="fab fa-github fa-lg"></i>                    
+                    </a>
+                    <a href=https://twitter.com/${fellow.twitter} target="_blank">
+                        <i class="fab fa-twitter fa-lg"></i>                
+                    </a>
+                    <a href=${fellow.resume} target="_blank">
+                        <img class="social-link-icon" src="../assets/img/icons/resume.png">
+                    </a>
+                    <a href=https://www.linkedin.com/in/${fellow.linkedin}>
+                        <i class="fab fa-linkedin-in fa-lg"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 <div class="container page">
-    <h2 id="inspiration">Description</h2>
+    <h2 id="inspiration">About</h2>
 
 <p>{{page.description}}</p>
 
-<h2 id="what-it-does">Favourite Programming Languages</h2>
+<h2>Favorite Programming Languages</h2>
 
 <p>{{page.favLangs}}</p>
 
-<h2 id="how-we-built-it">Interests outside of Technology</h2>
+<h2>Interests outside of Technology</h2>
 
 <p>{{page.interests}}</p>
 
-<h2 id="challenge-we-ran-into">University</h2>
+<h2>University</h2>
 
 <p>{{page.university}}</p>
 

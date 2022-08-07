@@ -9,7 +9,7 @@ h2 {
 body {
     background-color: #f5f5f9 !important;
     background-size: cover;
-    width: auto!important; 
+    width: auto !important; 
     overflow-x: hidden!important;
     font-family: "Open Sans", serif;
 }
@@ -101,17 +101,6 @@ hr {
     margin-bottom: 1em !important;
 }
 
-// .left-arrow a img {
-//     width: 4%; 
-//     height: 4%;
-//     margin-left: -60px; 
-//     margin-top: -3px;
-// }
-
-// .container {
-//     max-width: 550px;
-// }
-
 .left-arrow {
     display: inline-block;
     width: 40.95px; 
@@ -137,7 +126,6 @@ hr {
     .banner {
         display: flex;
         padding: 20px 0px 20px 0px;
-        height: 110px;
     }
 
     .banner .logo {
@@ -178,5 +166,21 @@ hr {
         border-radius: 20px;
         margin-right: 20px;
         object-fit: cover;
+    }
+}
+
+.title-with-image {
+    .icon {
+        .social-link-icon {
+            width: 30px;
+            margin-top: -10px;
+        }
+        .fa-github,
+        .fa-twitter,
+        .fa-linkedin-in {
+            font-size: 30px;
+            color: black;
+        }
+
     }
 }
