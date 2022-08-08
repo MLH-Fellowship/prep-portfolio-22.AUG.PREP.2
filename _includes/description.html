@@ -1,5 +1,5 @@
 <h2>Meet the Pod</h2>
-<div id="members" class="card-container">
+<div id="members" class="profile-card-container">
     <script>
         // A helper function to get data from github API
         async function getData(url) {
@@ -106,7 +106,7 @@
                 fellows = await computeScore(fellows, repo.owner, repo.name);
             }
 
-            const cardContainer = document.getElementsByClassName('card-container')[0];
+            const cardContainer = document.getElementsByClassName('profile-card-container')[0];
 
             let fellowsHTML = "";
             let lock = 3;

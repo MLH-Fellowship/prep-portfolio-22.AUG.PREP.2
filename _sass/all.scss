@@ -12,6 +12,13 @@
   grid-template-columns: repeat(4, 1fr);
   font-family: 'Open Sans', sans-serif;
   margin-bottom: 50px;
+}
+
+.profile-card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 50px;
   min-height: 600px;
 }
 
