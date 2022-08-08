@@ -58,7 +58,7 @@ h2 {
   margin: 20px 30px;
   background-color: #e9e9f3;
   border-radius: 0.375rem;
-  padding: 1.5em;
+  padding: 1em;
   font-size: 1.2em;
 }
 
@@ -169,10 +169,12 @@ a {
     .github-link {
       margin-top: 20px;
       display: block;
-    }
-}
+    }  
+  }
 
 .icon {
+  margin-top: 20px;
+
   flex-wrap: wrap;
   flex-direction: column;
   display: flexbox;
@@ -185,4 +187,9 @@ a {
   a {
     padding-right: 2px;
   }
+
+}
+
+.site-title {
+  padding-bottom: 15px;
 }
