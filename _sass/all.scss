@@ -65,7 +65,7 @@ h2 {
 .card img {
   max-width: 100%;
   border-radius: .15rem;
-  margin-bottom: .5em;
+  margin-top: -10px;
 }
 
 .card:hover {
@@ -174,10 +174,6 @@ a {
 
 .icon {
   margin-top: 20px;
-
-  flex-wrap: wrap;
-  flex-direction: column;
-  display: flexbox;
 
   .social-link-icon {
     width: 8%;
