@@ -2,8 +2,8 @@ title: 'Hack2gether'
 email: fellowship@mlh.io
 description: >- # this means to ignore newlines until "baseurl:"
   This is my portfolio website!
-baseurl: '/prep-portfolio-22.AUG.PREP.2-team-1'
-url: 'deadreyo.github.io/prep-portfolio-22.AUG.PREP.2-team-1'
+baseurl: '/'
+url: '/'
 twitter_username: mlhacks
 github_username: mlh-fellowship
 
