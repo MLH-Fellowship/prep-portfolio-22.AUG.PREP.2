@@ -1,38 +1,63 @@
-- title: Weather Data Site
-  img: rainyday.jpeg
+- title: Hack2gether Weather
+  img: Hack2getherWeather.png
   event: MLH Prep Pod Project
-  date: Fall 2021  - Batch 4.5
+  date: 19th August 2022
   page-name: project
-  owner: MLH August Prep Pod 2
-  summary: An website that shows weather updates and other cool things.
-  github: https://prep-22-aug-prep-2-project.netlify.app/
+  owner: Hack2gether Pod
+  owner-page: ../
+  summary: A weather app that shows information about the weather in a city.
+  github: https://github.com/MLH-Fellowship/prep-project-22.AUG.PREP.2
 
-- title: Online Shopping App
-  img: shopping.jpeg
-  event: MLH Prep Pod Project
-  date: Fall 2021  - Batch 4.5
-  page-name: project
-  owner: Ahmed Atwa
-  owner-page: ahmed-atwa
-  summary: An app that allows users to buy and sell items online.
-  github: https://google.com
-
-- title: Todo List
-  img: todo.jpeg
-  event: MLH Prep Pod Project
-  date: Fall 2021  - Batch 4.5
-  page-name: project
+- title: ProDOGtivity Pet
+  img: ProDOGtivity.png
+  event: College Project
+  date: 1st May 2022
   owner: Yanna Lin
   owner-page: yanna-lin
-  summary: An app that allows users to create and manage their todo lists.
-  github: https://google.com
+  summary: A Canvas-integrated desktop pet application that helps student with schedule-management and staying productive.
+  github: https://github.com/linyanna/ProDOGtivity
 
-- title: iOS App
-  img: ios.jpeg
-  event: MLH Prep Pod Project
-  date: Fall 2021  - Batch 4.5
-  page-name: project
-  owner: Zeyu Wang
-  owner-page: zeyu-wang
-  summary: An iOS app that allows users to create and manage stuff.
-  github: https://google.com
+- title: ASUENG Manager
+  img: ASUENGManager.png
+  event: Personal Project
+  date: 1st May 2022
+  owner: Ahmed Atwa
+  owner-page: ahmed-atwa
+  summary: Desktop application that helps people view, create and modify JSON data files using a graphical interface.
+  github: https://github.com/Deadreyo/ASUENG-Manager
+
+- title: Dev House
+  img: Dev-House.png
+  event: Personal Project
+  date: 20th May 2022
+  owner: Wisdom Ekpotu
+  owner-page: wisdom-ekpotu
+  summary: Dev House is an Open Source Blogging Platform for Developers. Instantly create a blog for free, then share your thoughts with engineers, developers, and other tech professionals
+  github: https://github.com/wisdomekpotu/devhouse
+  
+- title: Schedd
+  img: Schedd.jpg
+  event: Personal Project
+  date: 15th January 2022
+  owner: Omeir Fawaz
+  owner-page: omeir-fawaz
+  summary: An app to check university classes, attendance, grades, and more, without the hassle.
+  github: https://github.com/omeiirr/schedd
+
+- title: Perpetual Sunset
+  img: perpetualSunset.png
+  event: Personal Project
+  date: 15th January 2022
+  owner: Jane Ling
+  owner-page: jane-ling
+  summary: Perpetual Sunset is a single page app and Twitter bot that shows a sunsets on Earth every hour, 24 hours a day. Using the Twitter and AWS API, the bot searches for a sunset photo and analyzes the contents to post on the static webpage.
+  github: https://github.com/jcyling/sunset-bot
+
+- title: Traffic Light System
+  img: TrafficLight.png
+  event: Nanodegree Project
+  date: 12th August 2022
+  owner: Ziad Gamalelden
+  owner-page: ziad-gamalelden
+  summary: Traffic light system is a software system that runs the normal flow of traffic lights with an addition of pedestrian button that enables pedestrians to have the priority of crossing the road
+  github: https://github.com/ZAK0EE/TrafficLightSystem
