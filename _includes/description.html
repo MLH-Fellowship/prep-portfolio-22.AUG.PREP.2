@@ -1,4 +1,5 @@
 <h2>Meet the Pod</h2>
+<div id="error"></div>
 <div id="members" class="card-container profile-card-container">
     <script>
         // A helper function to get data from github API
@@ -79,6 +80,7 @@
         // Create fellows' Cards and render them 
         async function createFellowCards() {
             let fellows = []; // initialize array holding fellows
+            let error = false
 
             // extract github usernames from fellows.yml
             {% for item in site.data.fellows %} 
@@ -104,19 +106,28 @@
                 {owner: "MLH-Fellowship", name: "prep-project-22.AUG.PREP.2"}
             ]
             
-            for (repo of repos) {
-                fellows = await computeScore(fellows, repo.owner, repo.name);
+            try{
+                for (repo of repos) {
+                    fellows = await computeScore(fellows, repo.owner, repo.name);
+                }
+            } catch (e) {
+                console.error("Error when fecthing score, ", e)
+                error = true
             }
 
             const cardContainer = document.getElementsByClassName('profile-card-container')[0];
 
             let fellowsHTML = "";
             let lock = 3;
+            if(error) {
+                let errorDiv = document.getElementById('error')
+                errorDiv.innerHTML += '<div id="error-inner">Error fetching the scores: API Limit Reached. Try refreshing the page after 1 minute.</div>'
+            }
 
             for (const fellow of fellows) {
                 let img = '';
 
-                if (lock && lock--) {
+                if (lock && lock-- && !error) {
                     img = `<img src="./assets/img/icons/crown${3-lock}.png" class="card-badge" />`;
                 }
 
