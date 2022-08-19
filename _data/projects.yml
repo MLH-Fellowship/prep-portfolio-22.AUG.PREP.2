@@ -61,3 +61,12 @@
   owner-page: ziad-gamalelden
   summary: Traffic light system is a software system that runs the normal flow of traffic lights with an addition of pedestrian button that enables pedestrians to have the priority of crossing the road
   github: https://github.com/ZAK0EE/TrafficLightSystem
+
+- title: ZotMeal
+  img: zotmeal.png
+  event: Personal Project
+  date: 3rd January 2022
+  owner: Shengyuan Lu
+  owner-page: shengyuan-lu
+  summary: A utility iOS app that displays up-to-date UC Irvine dining hall menus, schedules, and pricing.
+  github: https://github.com/shengyuan-lu/ZotMeal-iOS
