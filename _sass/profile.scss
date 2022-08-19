@@ -1,43 +1,56 @@
 .profile {
-    background-color: #133667 !important;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    
+  background-color: #133667 !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  height: 400px;
+  margin-top: 4.5rem;
+  margin-bottom: 50px;
+
+  img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    padding-bottom: 6rem;
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
+    font-family: 'Teko', sans-serif;
+    font-size: 10rem;
+    text-transform: uppercase;
+    animation: glow 2s ease-in-out infinite alternate;
     text-align: center;
-    height: fit-content;
-    margin-top: 4.5rem;
-    margin-bottom: 50px;
+  }
 
-    h1 {
-        font-size: 50px;
-        font-weight: 700;
-        color: white;
-    }
+  .profile-pic-container {
+      border-radius: 50%;
+      width: 250px;
+      height: 250px;
+      overflow: hidden;
+      position: relative;
+      display: inline-block;
+      margin: 20px
+  }
 
-    .profile-pic-container {
-        border-radius: 50%;
-        width: 250px;
-        height: 250px;
-        overflow: hidden;
-        position: relative;
-        display: inline-block;
-        margin: 20px
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 20px #82ce75;
     }
-
-    .profile-pic-container img {
-        width: 100%; 
-        height: 100%;
-        object-fit: cover;
-        overflow: hidden;
+    to {
+      text-shadow: 0 0 40px #34c17d, 0 0 10px #34c17d;
     }
-    .profile-pic-container:hover{
-        transform: scale(1.3);
-        transition: 0.5s;
-    }
-    .profile-picture {
-        margin-bottom: 20px;
-        padding-top: 10px;
-        min-height: 200px;
-    }
+  }
 }

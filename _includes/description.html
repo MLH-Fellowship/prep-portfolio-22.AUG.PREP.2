@@ -85,6 +85,7 @@
                 fellows.push({
                     github: ("{{ item.github }}") ? "https://github.com/{{ item.github }}" : null,
                     name: "{{ item.name }}",
+                    picture: "{{ item.img }}",
                     location: "{{ item.location }}",
                     linkedin: ("{{ item.linkedin }}") ? "https://www.linkedin.com/in/{{ item.linkedin }}" : null,
                     twitter: ("{{ item.twitter }}") ? "https://twitter.com/{{ item.twitter }}" : null,
@@ -123,32 +124,39 @@
                 <div class="card">
                     <div class="info">
                         ${img}
-                        <a href="fellows/${fellow.name.replace(/ /g, '-').toLowerCase()}">
-                            <p class="title"> ${ fellow.name }</p>
-                            <p class="location"> ${ fellow.location }</p>
-                        <a>
-                        <div class="icon">
-                            <a ${(!fellow.github) ? "hidden" : ""} href=${fellow.github} target="_blank">
-                                <i class="fab fa-github fa-lg"></i>                    
-                            </a>
-                            <a ${(!fellow.twitter) ? "hidden" : ""} href=${fellow.twitter} target="_blank">
-                                <i class="fab fa-twitter fa-lg" style="color: #1DA1F2;"></i>                
-                            </a>
-                            <a ${(!fellow.resume) ? "hidden" : ""} href=${fellow.resume} target="_blank">
-                                <img class="social-link-icon" src="assets/img/icons/resume.png">
-                            </a>
-                            <a ${(!fellow.linkedin) ? "hidden" : ""} href=${fellow.linkedin} target="_blank">
-                                <i class="fab fa-linkedin-in fa-lg" style="color: #0A66C2;"></i>
-                            </a>
+                        <div class="profile-container">
+                          <div class="profile-picture-container">
+                            <img class="profile-picture" src="../assets/img/${fellow.picture}" />
+                          </div>
+                          <div class="profile-text-container">
+                            <a href="fellows/${fellow.name.replace(/ /g, '-').toLowerCase()}">
+                                <p class="title" style="text-align: center"> ${ fellow.name }</p>
+                                <p class="location" style="text-align: center"> ${ fellow.location }</p>
+                            <a>
+                            <div class="icon">
+                                <a ${(!fellow.github) ? "hidden" : ""} href=${fellow.github} target="_blank">
+                                    <i class="fab fa-github fa-lg"></i>                    
+                                </a>
+                                <a ${(!fellow.twitter) ? "hidden" : ""} href=${fellow.twitter} target="_blank">
+                                    <i class="fab fa-twitter fa-lg" style="color: #1DA1F2;"></i>                
+                                </a>
+                                <a ${(!fellow.resume) ? "hidden" : ""} href=${fellow.resume} target="_blank">
+                                    <img class="social-link-icon" src="assets/img/icons/resume.png">
+                                </a>
+                                <a ${(!fellow.linkedin) ? "hidden" : ""} href=${fellow.linkedin} target="_blank">
+                                    <i class="fab fa-linkedin-in fa-lg" style="color: #0A66C2;"></i>
+                                </a>
+                            </div>
+                            <p class="card-score">Score: ${fellow.total}
+                                <span class="card-score-breakdown">
+                                    Commits: ${fellow.commits}<br>
+                                    Pull requests: ${fellow.pullRequests}<br>
+                                    Issues: ${fellow.issues}<br>
+                                    <!-- Comments: ${fellow.comments}<br> -->
+                                </span>
+                            </p>
+                          </div>
                         </div>
-                        <p class="card-score">Score: ${fellow.total}
-                            <span class="card-score-breakdown">
-                                Commits: ${fellow.commits}<br>
-                                Pull requests: ${fellow.pullRequests}<br>
-                                Issues: ${fellow.issues}<br>
-                                <!-- Comments: ${fellow.comments}<br> -->
-                            </span>
-                        </p>
                     </div>
                 </div>
                 `
