@@ -1,65 +1,24 @@
-# Portfolio Template
+# Hack2gether Portfolio
 
-This is a Jekyll website template designed for Prep Fellows.
+This is a Jekyll website for Hack2gether, one of the MLH Prep August'22 pods. It is based on the [template](https://github.com/MLH-Fellowship/portfolio-template) designed for Prep Fellows.
 
+## Website Deployment
+The website is [deployed on Github Pages](https://mlh-fellowship.github.io/prep-portfolio-22.AUG.PREP.2).
 
-## Make your own!
+## Features
+### The website has been developed by us and have gained so many new and cool features like:
+- Light and Dark modes.
+- Displaying images, names, locations & social links for the pod members.
+- Profile pages to show more information about the pod members.
+- A scoring system for the contributions done by each member to the program's projects, and a ranking system.
+- A map showing the location of each of the pod member.
+- A section showcasing the projects made by the pod members.
+- A section for blogs.
 
-1. Use the Template button.
-2. Update `_config.yml` to contain your information.
-    1. Change `url` to the URL you'll be hosting it at
-    2. Make sure it has the /
-3. Use something like Netlify or GitHub Pages to deploy (note, this only works on username.github.io, not username.github.io/repo-name)
+### There are also cool features behind the scenes for the website like:
+- Automatic build & deployment to Github Pages.
+- Automatic Image Compression.
 
-## Add your portfolio
-
-Head to `_data` and fill out either `projects.yml`, `experience.yml` and `education.yml`.
-
-Project example.
-```yaml
-- title: Online Shopping Application
-  event: MLH Prep - Batch 4.5
-  date: Fall 2021
-```
-
-Experience example.
-```yaml
-- role: MLH Prep Fellow
-  company: MLH Fellowship
-  dates: Summer 2021
-  logo: fellowship.svg
-```
-
-Education example.
-```yaml
-- course: Prep Fellow
-  institute: MLH Fellowship
-  dates: Fall 2021
-  logo: fellowship.svg
-```
-## Add project posts
-
-1. Make a new `.md` file inside of `projects`.
-2. Add the header to your markdown file (see below) and change the title to the name of your blog post.
-3. Write your project page! Can be a README from GitHub or your Devpost page.
-4. Add the `page-name` field to your `projects.yml` (see below).
-
-Top of post markdown file post.
-```
----
-title: Project
-layout: page
----
-```
-
-`projects.yml` with the `page-name` field.
-
-```yaml
-- title: Online Shopping Application
-  event: MLH Prep - Batch 4.5
-  date: Summer 2021
-  page-name: project
-```
 
 ## Development
 
