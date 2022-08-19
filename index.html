@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- HTML Meta Tags -->
+    <meta name="description" content="Hack2gether's Pod Portfolio showcasing each member of this amazing MLH Prep pod.">
+  
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Hack2gether's Portfolio">
+    <meta property="og:description" content="Hack2gether's Pod Portfolio showcasing each member of this amazing MLH Prep pod.">
+    <meta property="og:image" content="https://mlh-fellowship.github.io/prep-portfolio-22.AUG.PREP.2/assets/img/social-link.jpg">
+  
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="mlh-fellowship.github.io">
+    <meta property="twitter:url" content="https://mlh-fellowship.github.io/prep-portfolio-22.AUG.PREP.2/">
+    <meta name="twitter:title" content="Hack2gether's Portfolio">
+    <meta name="twitter:description" content="Hack2gether's Pod Portfolio showcasing each member of this amazing MLH Prep pod.">
+    <meta name="twitter:image" content="https://mlh-fellowship.github.io/prep-portfolio-22.AUG.PREP.2/assets/img/social-link.jpg">
+  
+    <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+          
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script src="https://jsxss.com/assets/xss.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/darkreader@4.9.44/darkreader.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+
+    <link lang='sass' rel="stylesheet" href="assets/css/main.css">
+    <link rel='icon' href='assets/img/favicon.ico' type='image/x-icon' />
+
+    <!-- leaflet map css link-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+        crossorigin="" />
+    <title>Hack2gether</title>
+</head>
+
+
+<body>
+    <div id="page-container">
+        <div id="content-wrap">
+            <header class="nav-bar">
+    <div class="nav-content">
+        <a href="/">
+            <div class="nav-logo fade-in">
+                <img src="./assets/img/mlh-prep.png" />
+            </div>
+        </a>
+        <div id="mobile-nav">Menu</div>
+        <div class="nav-list hidden">
+            <a href="#members">
+                <div class="nav-item">
+                    Members
+                </div>
+            </a>
+            <a href="#projects">
+                <div class="nav-item">
+                    Projects
+                </div>
+            </a>
+            <a href="#dark-mode" class="toggle-dark-mode">
+                <div class="nav-item">
+                    <i id="dark-icon" class="fa fa-moon" style="color: #E5E5E5;"></i>
+                    <span id="dark-text"> SunSet </span>
+                </div>
+            </a>
+        </div>
+    </div>
+</header>
+
+<script>
+    let navLogo = document.getElementsByClassName("nav-logo")[0];
+    let navList = document.getElementsByClassName("nav-list")[0];
+    let darkMode = document.getElementsByClassName("toggle-dark-mode")[0];
+    let mobileNav = document.getElementById("mobile-nav");
+
+    window.addEventListener("scroll", function () {
+        let scrollTop = window.pageYOffset;
+        if (scrollTop > 0) {
+            navLogo.classList.add("fade-in");
+            navLogo.classList.add("visible");
+        }
+    });
+
+    mobileNav.onclick = function() {
+        if (navList.classList.contains("hidden")) {
+            navList.classList.remove("hidden");
+        }
+        else {
+            navList.classList.add("hidden");
+        }
+    };
+
+    darkMode.onclick = function() {
+        darkmode();
+    }
+
+    function darkmode() {
+        // console.log("HELLO WORLD!")
+        let enabled = localStorage.getItem('dark-mode')
+
+        if (enabled === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                enable();
+            }
+        } else if (enabled === 'true') {
+            enable()
+        }
+
+        if (localStorage.getItem('dark-mode') === 'false') {
+            enable();
+        } else {
+            disable();
+        }
+    }
+
+    function enable()  {
+        DarkReader.setFetchMethod(window.fetch)
+        DarkReader.enable();
+        localStorage.setItem('dark-mode', 'true');
+        
+        const span = document.getElementById('dark-text');
+        span.textContent = 'SunRise';
+        
+        const i = document.getElementById('dark-icon');
+        i.className = 'fa fa-sun';
+        i.style = 'color: #FCE570;'
+    }
+
+    function disable() {
+        DarkReader.disable();
+        localStorage.setItem('dark-mode', 'false');
+
+        const span = document.getElementById('dark-text');
+        span.textContent = 'SunSet';
+
+        const i = document.getElementById('dark-icon');
+        i.className = 'fa fa-moon';
+        i.style = 'color: #E5E5E5;'
+    }
+</script>
+
+            <div
+  class="profile"
+  id="profile"
+  style="
+    background: url('./assets/img/terminal.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  "
+>
+  <!-- <div class="profile-picture">
+    
+    <div class="profile-pic-container" title=Ahmed Atwa>
+      <img src="./assets/img/AhmedAtwa.jpeg" />
+    </div>
+    
+    <div class="profile-pic-container" title=Ziad Gamalelden>
+      <img src="./assets/img/ZiadGamaleldin.jpg" />
+    </div>
+    
+    <div class="profile-pic-container" title=Omeir Fawaz>
+      <img src="./assets/img/OmeirFawaz.png" />
+    </div>
+    
+    <div class="profile-pic-container" title=Jane Ling>
+      <img src="./assets/img/JaneLing.jpeg" />
+    </div>
+    
+    <div class="profile-pic-container" title=Yanna Lin>
+      <img src="./assets/img/YannaL.jpg" />
+    </div>
+    
+    <div class="profile-pic-container" title=Bevin Duncan>
+      <img src="./assets/img/BevinDuncan.jpg" />
+    </div>
+    
+    <div class="profile-pic-container" title=Grace Gong>
+      <img src="./assets/img/GraceGong.jpeg" />
+    </div>
+    
+    <div class="profile-pic-container" title=Wisdom Ekpotu>
+      <img src="./assets/img/WisdomEkpotu.jpg" />
+    </div>
+    
+    <div class="profile-pic-container" title=Zeyu Wang>
+      <img src="./assets/img/ZeyuWang.png" />
+    </div>
+    
+    <div class="profile-pic-container" title=Ahmed Saed>
+      <img src="./assets/img/AhmedSaed.png" />
+    </div>
+    
+    <div class="profile-pic-container" title=Keaton Martin>
+      <img src="./assets/img/Keaton.png" />
+    </div>
+    
+    <div class="profile-pic-container" title=Yuehan Wang>
+      <img src="./assets/img/YuehanWang.jpeg" />
+    </div>
+    
+    <div class="profile-pic-container" title=Shengyuan Lu>
+      <img src="./assets/img/ShengyuanLu.png" />
+    </div>
+    
+    <div class="profile-pic-container" title=Fareeda Ragab>
+      <img src="./assets/img/Farida.jpg" />
+    </div>
+    
+    <div class="profile-pic-container" title=Phong Nguyen>
+      <img src="./assets/img/PhongNguyen.jpg" />
+    </div>
+    
+  </div> -->
+  <h1 class="site-title" style="
+  position:relative;
+  text-align: center;
+  justify-content: center;
+  top: 100px;
+
+  ">
+    Hack2gether
+  </h1>
+
+</div>
+
+            <h2>Meet the Pod</h2>
+<div id="error"></div>
+<div id="members" class="card-container profile-card-container">
+    <script>
+        // A helper function to get data from github API
+        async function getData(url) {
+            const res = await fetch( url );
+            const data = res.json();
+            return data;
+        }
+
+        // Compute the score for each fellow based on the amount of contributions.
+        async function computeScore(fellows, repo_owner, repo_name) {
+            // Helper function to compute Issues/PR score
+            function computeIssuesScore(obj, item) {
+                let isPR = 0;
+
+                // Determine if the issue is a PR or not (Because Github treats PRs as issues too)
+                isPR = (item.pull_request != undefined) + 0
+
+                // Score for Issue/PR Author (Increase the score by 1 if it's not initialized otherwise initialize it to 1)   
+                obj[item.user.html_url] = [
+                    ((obj[item.user.html_url]) ? obj[item.user.html_url][0] : 0) + isPR, 
+                    ((obj[item.user.html_url]) ? obj[item.user.html_url][1] : 0) + !isPR
+                ]
+
+                // Score for assigned fellows to the Issue/PR (Increase the score by 1 if it's not initialized otherwise initialize it to 1)
+                for (let assignee of item.assignees) {
+                    // Don't increase the score of the Author again
+                    if (assignee.html_url != item.user.html_url) {
+                        obj[assignee.html_url] = [
+                            ((obj[assignee.html_url]) ? obj[assignee.html_url][0] : 0) + isPR,
+                            ((obj[assignee.html_url]) ? obj[assignee.html_url][1] : 0) + !isPR
+                        ]
+                    }
+                    
+                }
+
+                return obj;
+            }
+
+            // count total commits per user
+            const rawCommitData = await getData(`https://api.github.com/repos/${repo_owner}/${repo_name}/stats/contributors`);
+
+            let commitData = rawCommitData.reduce((obj, item) => (obj[item.author.html_url] = item.total, obj) ,{});
+
+            // count created issues and PRs (closed ones) per user
+            const rawClosedIssuesData = await getData(`https://api.github.com/repos/${repo_owner}/${repo_name}/issues?state=closed&per_page=99`)
+
+            let closedIssuesData = rawClosedIssuesData.reduce((obj, item) => computeIssuesScore(obj, item), {});
+
+            // count created issues and PRs (opened ones) per user
+            const rawOpenedIssuesData = await getData(`https://api.github.com/repos/${repo_owner}/${repo_name}/issues`)
+            
+            let openedIssuesData = rawOpenedIssuesData.reduce((obj, item) => computeIssuesScore(obj, item), {});
+
+            // Assign the score to each fellow and calculate total score
+            for (const fellow of fellows) {
+                fellow.commits += (!commitData[fellow.github]) ? 0 : commitData[fellow.github];
+                
+                let closedPRs = !(closedIssuesData[fellow.github]) ? 0 : closedIssuesData[fellow.github][0],
+                    closedIssues = !(closedIssuesData[fellow.github]) ? 0 : closedIssuesData[fellow.github][1],
+                    openedPRs = !(openedIssuesData[fellow.github]) ? 0: openedIssuesData[fellow.github][0],
+                    openedIssues = !(openedIssuesData[fellow.github]) ? 0: openedIssuesData[fellow.github][1];
+
+                fellow.pullRequests += closedPRs + openedPRs;
+                fellow.issues += closedIssues + openedIssues;
+                
+                fellow.comments += 0; // TODO
+                fellow.total += fellow.commits + fellow.pullRequests + fellow.issues + fellow.comments;
+            }
+
+            fellows.sort((a, b) => {
+                return (a.total < b.total) ? 1 : ((b.total < a.total) ? -1 : 0);
+            }); // sort fellows based on total commits
+
+            return fellows
+        }
+
+        // Create fellows' Cards and render them 
+        async function createFellowCards() {
+            let fellows = []; // initialize array holding fellows
+            let error = false
+
+            // extract github usernames from fellows.yml
+             
+                fellows.push({
+                    github: ("Deadreyo") ? "https://github.com/Deadreyo" : null,
+                    name: "Ahmed Atwa",
+                    picture: "AhmedAtwa.jpeg",
+                    location: "Cairo, Egypt",
+                    linkedin: ("ahmed-mohamed-atwa") ? "https://www.linkedin.com/in/ahmed-mohamed-atwa" : null,
+                    twitter: ("") ? "https://twitter.com/" : null,
+                    resume: "https://drive.google.com/file/d/1CXeqwLKahvFYo-q4fAIeFB1udlIazOTn/view?usp=sharing",
+                    commits: 0,
+                    pullRequests: 0,
+                    issues: 0,
+                    comments: 0,
+                    total: 0.
+                });
+             
+                fellows.push({
+                    github: ("ZAK0EE") ? "https://github.com/ZAK0EE" : null,
+                    name: "Ziad Gamalelden",
+                    picture: "ZiadGamaleldin.jpg",
+                    location: "Tanta, Egypt",
+                    linkedin: ("ziad-gamaleldin") ? "https://www.linkedin.com/in/ziad-gamaleldin" : null,
+                    twitter: ("") ? "https://twitter.com/" : null,
+                    resume: "https://drive.google.com/file/d/1aw9i6S0GuLulkY4nG28nVwxZGGxID3Pg/view?usp=sharing",
+                    commits: 0,
+                    pullRequests: 0,
+                    issues: 0,
+                    comments: 0,
+                    total: 0.
+                });
+             
+                fellows.push({
+                    github: ("omeiirr") ? "https://github.com/omeiirr" : null,
+                    name: "Omeir Fawaz",
+                    picture: "OmeirFawaz.png",
+                    location: "New Delhi, India",
+                    linkedin: ("") ? "https://www.linkedin.com/in/" : null,
+                    twitter: ("") ? "https://twitter.com/" : null,
+                    resume: "",
+                    commits: 0,
+                    pullRequests: 0,
+                    issues: 0,
+                    comments: 0,
+                    total: 0.
+                });
+             
+                fellows.push({
+                    github: ("jcyling") ? "https://github.com/jcyling" : null,
+                    name: "Jane Ling",
+                    picture: "JaneLing.jpeg",
+                    location: "London, United Kingdom",
+                    linkedin: ("") ? "https://www.linkedin.com/in/" : null,
+                    twitter: ("") ? "https://twitter.com/" : null,
+                    resume: "",
+                    commits: 0,
+                    pullRequests: 0,
+                    issues: 0,
+                    comments: 0,
+                    total: 0.
+                });
+             
+                fellows.push({
+                    github: ("linyanna") ? "https://github.com/linyanna" : null,
+                    name: "Yanna Lin",
+                    picture: "YannaL.jpg",
+                    location: "Gainesville, Florda, USA",
+                    linkedin: ("yanna-lin") ? "https://www.linkedin.com/in/yanna-lin" : null,
+                    twitter: ("") ? "https://twitter.com/" : null,
+                    resume: "",
+                    commits: 0,
+                    pullRequests: 0,
+                    issues: 0,
+                    comments: 0,
+                    total: 0.
+                });
+             
+                fellows.push({
+                    github: ("bevin-duncan") ? "https://github.com/bevin-duncan" : null,
+                    name: "Bevin Duncan",
+                    picture: "BevinDuncan.jpg",
+                    location: "Seattle, WA, USA",
+                    linkedin: ("") ? "https://www.linkedin.com/in/" : null,
+                    twitter: ("") ? "https://twitter.com/" : null,
+                    resume: "",
+                    commits: 0,
+                    pullRequests: 0,
+                    issues: 0,
+                    comments: 0,
+                    total: 0.
+                });
+             
+                fellows.push({
+                    github: ("ggongg") ? "https://github.com/ggongg" : null,
+                    name: "Grace Gong",
+                    picture: "GraceGong.jpeg",
+                    location: "Toronto, Canada",
+                    linkedin: ("") ? "https://www.linkedin.com/in/" : null,
+                    twitter: ("") ? "https://twitter.com/" : null,
+                    resume: "",
+                    commits: 0,
+                    pullRequests: 0,
+                    issues: 0,
+                    comments: 0,
+                    total: 0.
+                });
+             
+                fellows.push({
+                    github: ("wisdomekpotu") ? "https://github.com/wisdomekpotu" : null,
+                    name: "Wisdom Ekpotu",
+                    picture: "WisdomEkpotu.jpg",
+                    location: "Port-Harcourt, Nigeria",
+                    linkedin: ("") ? "https://www.linkedin.com/in/" : null,
+                    twitter: ("") ? "https://twitter.com/" : null,
+                    resume: "",
+                    commits: 0,
+                    pullRequests: 0,
+                    issues: 0,
+                    comments: 0,
+                    total: 0.
+                });
+             
+                fellows.push({
+                    github: ("wzy0766") ? "https://github.com/wzy0766" : null,
+                    name: "Zeyu Wang",
+                    picture: "ZeyuWang.png",
+                    location: "Los Angeles, CA, USA",
+                    linkedin: ("zwang0431") ? "https://www.linkedin.com/in/zwang0431" : null,
+                    twitter: ("") ? "https://twitter.com/" : null,
+                    resume: "https://drive.google.com/file/d/19MfRIAOqgcHL_p6s7ULit5nuSJtsOuLv/view?usp=sharing",
+                    commits: 0,
+                    pullRequests: 0,
+                    issues: 0,
+                    comments: 0,
+                    total: 0.
+                });
+             
+                fellows.push({
+                    github: ("Ahmedsaed") ? "https://github.com/Ahmedsaed" : null,
+                    name: "Ahmed Saed",
+                    picture: "AhmedSaed.png",
+                    location: "6th October City, Egypt",
+                    linkedin: ("ahmedsaed26") ? "https://www.linkedin.com/in/ahmedsaed26" : null,
+                    twitter: ("ahmed_saed26") ? "https://twitter.com/ahmed_saed26" : null,
+                    resume: "https://mustedueg-my.sharepoint.com/:f:/g/personal/200013206_must_edu_eg/EkYGE5zXbPFKqjlKKsMo1EQBP6MtMxgiZJpEMtWN4WZJig?e=teSl5S",
+                    commits: 0,
+                    pullRequests: 0,
+                    issues: 0,
+                    comments: 0,
+                    total: 0.
+                });
+             
+                fellows.push({
+                    github: ("keatonmartin") ? "https://github.com/keatonmartin" : null,
+                    name: "Keaton Martin",
+                    picture: "Keaton.png",
+                    location: "Versailles, KY, USA",
+                    linkedin: ("keaton-martin") ? "https://www.linkedin.com/in/keaton-martin" : null,
+                    twitter: ("") ? "https://twitter.com/" : null,
+                    resume: "",
+                    commits: 0,
+                    pullRequests: 0,
+                    issues: 0,
+                    comments: 0,
+                    total: 0.
+                });
+             
+                fellows.push({
+                    github: ("Yuehan-Wang") ? "https://github.com/Yuehan-Wang" : null,
+                    name: "Yuehan Wang",
+                    picture: "YuehanWang.jpeg",
+                    location: "Chicago, USA",
+                    linkedin: ("") ? "https://www.linkedin.com/in/" : null,
+                    twitter: ("") ? "https://twitter.com/" : null,
+                    resume: "",
+                    commits: 0,
+                    pullRequests: 0,
+                    issues: 0,
+                    comments: 0,
+                    total: 0.
+                });
+             
+                fellows.push({
+                    github: ("shengyuan-lu") ? "https://github.com/shengyuan-lu" : null,
+                    name: "Shengyuan Lu",
+                    picture: "ShengyuanLu.png",
+                    location: "Irvine, CA, USA",
+                    linkedin: ("shengyuan-lu") ? "https://www.linkedin.com/in/shengyuan-lu" : null,
+                    twitter: ("") ? "https://twitter.com/" : null,
+                    resume: "",
+                    commits: 0,
+                    pullRequests: 0,
+                    issues: 0,
+                    comments: 0,
+                    total: 0.
+                });
+             
+                fellows.push({
+                    github: ("farida52369") ? "https://github.com/farida52369" : null,
+                    name: "Fareeda Ragab",
+                    picture: "Farida.jpg",
+                    location: "Alexandria, Egypt",
+                    linkedin: ("fareeda-ragab") ? "https://www.linkedin.com/in/fareeda-ragab" : null,
+                    twitter: ("fareeda_ragab") ? "https://twitter.com/fareeda_ragab" : null,
+                    resume: "https://drive.google.com/file/d/1xHOLo_xyYnsJbRV7tICN0RfzZvPqyDfD/view?usp=sharing",
+                    commits: 0,
+                    pullRequests: 0,
+                    issues: 0,
+                    comments: 0,
+                    total: 0.
+                });
+             
+                fellows.push({
+                    github: ("farida52369") ? "https://github.com/farida52369" : null,
+                    name: "Phong Nguyen",
+                    picture: "PhongNguyen.jpg",
+                    location: "Austin, USA",
+                    linkedin: ("julian-phong-nguyen") ? "https://www.linkedin.com/in/julian-phong-nguyen" : null,
+                    twitter: ("") ? "https://twitter.com/" : null,
+                    resume: "https://drive.google.com/file/d/18sS7fzbcXDPnY_2NHLXeQFazNdsG0CVC/view?usp=sharing",
+                    commits: 0,
+                    pullRequests: 0,
+                    issues: 0,
+                    comments: 0,
+                    total: 0.
+                });
+            
+
+            
+            const repos = [
+                {owner: "MLH-Fellowship", name: "prep-portfolio-22.AUG.PREP.2"},
+                {owner: "MLH-Fellowship", name: "prep-project-22.AUG.PREP.2"}
+            ]
+            
+            try{
+                for (repo of repos) {
+                    fellows = await computeScore(fellows, repo.owner, repo.name);
+                }
+            } catch (e) {
+                console.error("Error when fecthing score, ", e)
+                error = true
+            }
+
+            const cardContainer = document.getElementsByClassName('profile-card-container')[0];
+
+            let fellowsHTML = "";
+            let lock = 3;
+            if(error) {
+                let errorDiv = document.getElementById('error')
+                errorDiv.innerHTML += '<div id="error-inner">Error fetching the scores: API Limit Reached. Try refreshing the page.</div>'
+            }
+
+            for (const fellow of fellows) {
+                let img = '';
+
+                if (lock && lock-- && !error) {
+                    img = `<img src="./assets/img/icons/crown${3-lock}.png" class="card-badge" />`;
+                }
+
+                let cardHTML = `
+                <div class="card">
+                    <div class="info">
+                        ${img}
+                        <div class="profile-container">
+                          <div class="profile-picture-container">
+                            <img class="profile-picture" src="assets/img/${fellow.picture}" />
+                          </div>
+                          <div class="profile-text-container">
+                            <a href="fellows/${fellow.name.replace(/ /g, '-').toLowerCase()}">
+                                <p class="title" style="text-align: center"> ${ fellow.name }</p>
+                                <p class="location" style="text-align: center"> ${ fellow.location }</p>
+                            <a>
+                            <div class="icon">
+                                <a ${(!fellow.github) ? "hidden" : ""} href=${fellow.github} target="_blank">
+                                    <i class="fab fa-github fa-lg"></i>                    
+                                </a>
+                                <a ${(!fellow.twitter) ? "hidden" : ""} href=${fellow.twitter} target="_blank">
+                                    <i class="fab fa-twitter fa-lg" style="color: #1DA1F2;"></i>                
+                                </a>
+                                <a ${(!fellow.resume) ? "hidden" : ""} href=${fellow.resume} target="_blank">
+                                    <img class="social-link-icon" src="assets/img/icons/resume.png">
+                                </a>
+                                <a ${(!fellow.linkedin) ? "hidden" : ""} href=${fellow.linkedin} target="_blank">
+                                    <i class="fab fa-linkedin-in fa-lg" style="color: #0A66C2;"></i>
+                                </a>
+                            </div>
+                            <p class="card-score">Score: ${fellow.total}
+                                <span class="card-score-breakdown">
+                                    Commits: ${fellow.commits}<br>
+                                    Pull requests: ${fellow.pullRequests}<br>
+                                    Issues: ${fellow.issues}<br>
+                                    <!-- Comments: ${fellow.comments}<br> -->
+                                </span>
+                            </p>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                `
+                fellowsHTML += cardHTML;
+            }
+            cardContainer.innerHTML += fellowsHTML;
+        }
+
+        createFellowCards();
+    </script>
+</div>
+
+
+            <div id="map"></div>
+
+
+<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+  integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+  crossorigin=""></script>
+
+<script>
+  const map = L.map('map', { scrollWheelZoom: false }).setView([13.581921, -38.320312], 2);
+
+  const basemaps = {
+    StreetView: L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }),
+    Topography: L.tileLayer.wms('http://ows.mundialis.de/services/service?', { layers: 'TOPO-WMS' }),
+    Places: L.tileLayer.wms('http://ows.mundialis.de/services/service?', { layers: 'OSM-Overlay-WMS' })
+  };
+
+  L.control.layers(basemaps).addTo(map);
+
+  basemaps.StreetView.addTo(map);
+
+
+  const marker1 = L.marker([4.815554, 7.049844])
+    .bindPopup(
+      `<div>
+  <img src="./assets/img/WisdomEkpotu.jpg" style="width:100%">
+  <h6>Wisdom Ekpotu</h6>
+  <strong>
+  Port-Harcourt, Nigeria <br/>
+ University of Uyo
+ </strong>
+</div>`)
+    .addTo(map);
+
+
+  const marker2 = L.marker([47.6038321, -122.330062])
+    .bindPopup(
+      `<div>
+  <img src="./assets/img/BevinDuncan.jpg" style="width:100%" >
+  <h6>Bevin Duncan</h6>
+  <strong>
+   Seattle, WA, USA<br/>
+   Flatiron School
+ </strong>
+</div>`)
+    .addTo(map);
+
+
+  const marker3 = L.marker([29.9723458, 30.9409205])
+    .bindPopup(
+      `<div>
+  <img src="./assets/img/AhmedSaed.png"  style="width:100%">
+  <h6>Ahmed Saed</h6>
+  <strong>
+    6th October City, Egypt<br/>
+    Misr University For Science And Technology
+ </strong>
+</div>`)
+    .addTo(map);
+
+
+  const marker4 = L.marker([30.7833666, 30.9982536])
+    .bindPopup(
+      `<div>
+  <img src="./assets/img/ZiadGamaleldin.jpg"  style="width:100%">
+  <h6>Ziad Gamalelden</h6>
+  <strong>
+    Tanta, Egypt<br/>
+    Faculty of Engineering, Tanta University
+ </strong>
+</div>`)
+    .addTo(map);
+
+  const marker5 = L.marker([51.5073219, -0.1276474])
+    .bindPopup(
+      `<div>
+  <img src="./assets/img/JaneLing.jpeg"  style="width:100%">
+  <h6>Jane Ling</h6>
+  <strong>
+    London, United Kingdom<br/>
+    University of Manchester
+ </strong>
+</div>`)
+    .addTo(map);
+
+  const marker6 = L.marker([33.6856969, -117.8259819])
+    .bindPopup(
+      `<div>
+  <img src="./assets/img/ShengyuanLu.png"  style="width:100%">
+  <h6>Shengyuan Lu</h6>
+  <strong>
+    Irvine, CA, USA<br/>
+    University of California, Irvine
+ </strong>
+</div>`)
+    .addTo(map);
+
+  const marker7 = L.marker([31.199004, 29.894378])
+    .bindPopup(
+      `<div>
+  <img src="./assets/img/Farida.jpg"  style="width:100%">
+  <h6>Fareeda Ragab</h6>
+  <strong>
+    Alexandria, Egypt<br/>
+    Faculty of Engineering, Alex University
+ </strong>
+</div>`)
+    .addTo(map);
+
+  const marker8 = L.marker([38.052576, -84.7299464])
+    .bindPopup(
+      `<div>
+  <img src="./assets/img/Keaton.png"  style="width:100%">
+  <h6>Keaton Martin</h6>
+  <strong>
+    Versailles, KY, USA<br/>
+    University of Kentucky
+ </strong>
+</div>`)
+    .addTo(map);
+
+  const marker9 = L.marker([41.8755616, -87.6244212])
+    .bindPopup(
+      `<div>
+  <img src="./assets/img/YuehanWang.jpg"  style="width:100%">
+  <h6>Yuehan Wang</h6>
+  <strong>
+    Chicago, USA<br/>
+ </strong>
+</div>`)
+    .addTo(map);
+
+  const marker10 = L.marker([41.350616, -74.353532])
+    .bindPopup(
+      `<div>
+  <img src="./assets/img/YannaL.jpg"  style="width:100%">
+  <h6>Yanna Lin</h6>
+  <strong>
+    Gainesville, Florda, USA<br/>
+    University of Florida
+ </strong>
+</div>`)
+    .addTo(map);
+
+  const marker11 = L.marker([29.652000427246094, -82.32339477539062])
+    .bindPopup(
+      `<div>
+  <img src="./assets/img/ZeyuWang.png" style="width:100%" >
+  <h6>Zeyu Wang</h6>
+  <strong>
+    Los Angeles, CA, USA<br/>
+    University of Southern California
+ </strong>
+</div>`)
+    .addTo(map);
+
+  const marker12 = L.marker([28.6138954, 77.2090057])
+    .bindPopup(
+      `<div>
+  <img src="./assets/img/OmeirFawaz.png"  style="width:100%">
+  <h6>Omeir Fawaz</h6>
+  <strong>
+    New Delhi, India<br/>
+    Amity University
+ </strong>
+</div>`)
+    .addTo(map);
+
+  const marker13 = L.marker([30.0443879, 31.2357257])
+    .bindPopup(
+      `<div>
+  <img src="./assets/img/AhmedAtwa.jpeg"  style="width:100%">
+  <h6>Ahmed Atwa</h6>
+  <strong>
+    Cairo, Egypt<br/>
+    Ain Shams University
+ </strong>
+</div>`)
+    .addTo(map);
+
+  const marker14 = L.marker([43.6534817, -79.3839347])
+    .bindPopup(
+      `<div>
+  <img src="./assets/img/GraceGong.jpeg" style="width:100%" >
+  <h6>Grace Gong</h6>
+  <strong>
+    Toronto, Canada<br/>
+    Western University
+ </strong>
+</div>`)
+    .addTo(map);
+</script>
+
+
+            <h2>Projects</h2>
+<div id="projects" class="card-container">
+    
+      <div class="card">
+        <div class="info">
+          
+          <a href="projects/project">
+          
+            <img src="./assets/img/projects/Hack2getherWeather.png" class="project-img">
+            <p class="title">Hack2gether Weather</p>
+          </a>
+          <p class="owner">By 
+            <span class="owner-name">
+              <a href="fellows/../">
+                Hack2gether Pod
+              </a>
+            </span>
+          </p>
+          <p class="location">MLH Prep Pod Project</p>
+          <p class="dates">19th August 2022</p>
+          <p class="summary">A weather app that shows information about the weather in a city.</p>
+          </a>
+          
+          <div class="icon">
+            <a class="github-link" target="_blank" href="https://github.com/MLH-Fellowship/prep-project-22.AUG.PREP.2">
+                <i class="fab fa-github fa-lg"></i>  
+                Github Repository                  
+            </a>
+          </div>
+          
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="info">
+          
+          <a>
+          
+            <img src="./assets/img/projects/ProDOGtivity.png" class="project-img">
+            <p class="title">ProDOGtivity Pet</p>
+          </a>
+          <p class="owner">By 
+            <span class="owner-name">
+              <a href="fellows/yanna-lin">
+                Yanna Lin
+              </a>
+            </span>
+          </p>
+          <p class="location">College Project</p>
+          <p class="dates">1st May 2022</p>
+          <p class="summary">A Canvas-integrated desktop pet application that helps student with schedule-management and staying productive.</p>
+          </a>
+          
+          <div class="icon">
+            <a class="github-link" target="_blank" href="https://github.com/linyanna/ProDOGtivity">
+                <i class="fab fa-github fa-lg"></i>  
+                Github Repository                  
+            </a>
+          </div>
+          
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="info">
+          
+          <a>
+          
+            <img src="./assets/img/projects/ASUENGManager.png" class="project-img">
+            <p class="title">ASUENG Manager</p>
+          </a>
+          <p class="owner">By 
+            <span class="owner-name">
+              <a href="fellows/ahmed-atwa">
+                Ahmed Atwa
+              </a>
+            </span>
+          </p>
+          <p class="location">Personal Project</p>
+          <p class="dates">1st May 2022</p>
+          <p class="summary">Desktop application that helps people view, create and modify JSON data files using a graphical interface.</p>
+          </a>
+          
+          <div class="icon">
+            <a class="github-link" target="_blank" href="https://github.com/Deadreyo/ASUENG-Manager">
+                <i class="fab fa-github fa-lg"></i>  
+                Github Repository                  
+            </a>
+          </div>
+          
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="info">
+          
+          <a>
+          
+            <img src="./assets/img/projects/Dev-House.png" class="project-img">
+            <p class="title">Dev House</p>
+          </a>
+          <p class="owner">By 
+            <span class="owner-name">
+              <a href="fellows/wisdom-ekpotu">
+                Wisdom Ekpotu
+              </a>
+            </span>
+          </p>
+          <p class="location">Personal Project</p>
+          <p class="dates">20th May 2022</p>
+          <p class="summary">Dev House is an Open Source Blogging Platform for Developers. Instantly create a blog for free, then share your thoughts with engineers, developers, and other tech professionals</p>
+          </a>
+          
+          <div class="icon">
+            <a class="github-link" target="_blank" href="https://github.com/wisdomekpotu/devhouse">
+                <i class="fab fa-github fa-lg"></i>  
+                Github Repository                  
+            </a>
+          </div>
+          
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="info">
+          
+          <a>
+          
+            <img src="./assets/img/projects/Schedd.jpg" class="project-img">
+            <p class="title">Schedd</p>
+          </a>
+          <p class="owner">By 
+            <span class="owner-name">
+              <a href="fellows/omeir-fawaz">
+                Omeir Fawaz
+              </a>
+            </span>
+          </p>
+          <p class="location">Personal Project</p>
+          <p class="dates">15th January 2022</p>
+          <p class="summary">An app to check university classes, attendance, grades, and more, without the hassle.</p>
+          </a>
+          
+          <div class="icon">
+            <a class="github-link" target="_blank" href="https://github.com/omeiirr/schedd">
+                <i class="fab fa-github fa-lg"></i>  
+                Github Repository                  
+            </a>
+          </div>
+          
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="info">
+          
+          <a>
+          
+            <img src="./assets/img/projects/perpetualSunset.png" class="project-img">
+            <p class="title">Perpetual Sunset</p>
+          </a>
+          <p class="owner">By 
+            <span class="owner-name">
+              <a href="fellows/jane-ling">
+                Jane Ling
+              </a>
+            </span>
+          </p>
+          <p class="location">Personal Project</p>
+          <p class="dates">15th January 2022</p>
+          <p class="summary">Perpetual Sunset is a single page app and Twitter bot that shows a sunsets on Earth every hour, 24 hours a day. Using the Twitter and AWS API, the bot searches for a sunset photo and analyzes the contents to post on the static webpage.</p>
+          </a>
+          
+          <div class="icon">
+            <a class="github-link" target="_blank" href="https://github.com/jcyling/sunset-bot">
+                <i class="fab fa-github fa-lg"></i>  
+                Github Repository                  
+            </a>
+          </div>
+          
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="info">
+          
+          <a>
+          
+            <img src="./assets/img/projects/TrafficLight.png" class="project-img">
+            <p class="title">Traffic Light System</p>
+          </a>
+          <p class="owner">By 
+            <span class="owner-name">
+              <a href="fellows/ziad-gamalelden">
+                Ziad Gamalelden
+              </a>
+            </span>
+          </p>
+          <p class="location">Nanodegree Project</p>
+          <p class="dates">12th August 2022</p>
+          <p class="summary">Traffic light system is a software system that runs the normal flow of traffic lights with an addition of pedestrian button that enables pedestrians to have the priority of crossing the road</p>
+          </a>
+          
+          <div class="icon">
+            <a class="github-link" target="_blank" href="https://github.com/ZAK0EE/TrafficLightSystem">
+                <i class="fab fa-github fa-lg"></i>  
+                Github Repository                  
+            </a>
+          </div>
+          
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="info">
+          
+          <a>
+          
+            <img src="./assets/img/projects/zotmeal.png" class="project-img">
+            <p class="title">ZotMeal</p>
+          </a>
+          <p class="owner">By 
+            <span class="owner-name">
+              <a href="fellows/shengyuan-lu">
+                Shengyuan Lu
+              </a>
+            </span>
+          </p>
+          <p class="location">Personal Project</p>
+          <p class="dates">3rd January 2022</p>
+          <p class="summary">A utility iOS app that displays up-to-date UC Irvine dining hall menus, schedules, and pricing.</p>
+          </a>
+          
+          <div class="icon">
+            <a class="github-link" target="_blank" href="https://github.com/shengyuan-lu/ZotMeal-iOS">
+                <i class="fab fa-github fa-lg"></i>  
+                Github Repository                  
+            </a>
+          </div>
+          
+        </div>
+      </div>
+    
+</div>
+
+            <h2>Blog</h2>
+<div id="blog" class="card-container">
+    
+
+    
+    <a href="blogs/post-1">
+        
+            <div class="card">
+                <div class="info">
+                    <img class="blog-image-container" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80">
+                    <p class="title">Configuring a Jekyll site</p>
+                    <p class="author">Jane Ling</p>
+                    <p class="dates">2022-08-04</p>
+                </div>
+            </div>
+        </a>
+        
+
+    
+    <a href="blogs/post-1">
+        
+            <div class="card">
+                <div class="info">
+                    <img class="blog-image-container" src="https://images.unsplash.com/photo-1618335829737-2228915674e0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80">
+                    <p class="title">Starting MLH Prep</p>
+                    <p class="author">Grace Gong</p>
+                    <p class="dates">2022-08-04</p>
+                </div>
+            </div>
+        </a>
+        
+
+    
+    <a href="blogs/post-1">
+        
+            <div class="card">
+                <div class="info">
+                    <img class="blog-image-container" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80">
+                    <p class="title">Setting Up Git and Github actions</p>
+                    <p class="author">Phong Nguyen</p>
+                    <p class="dates">2022-08-04</p>
+                </div>
+            </div>
+        </a>
+        
+</div>
+
+        </div>
+        <a href="#top" id="scrollToTopBtn" class="scrollToTopBtn">
+            <img src="./assets/img/icons/up-arrow.png" width="100%" />
+        </a>
+
+        <footer>
+  <div class="footer-content">
+    <img src="./assets/img/mlh-prep.png" />
+  </div>
+</footer>
+
+    </div>
+    <script>
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn")
+
+        function handleScroll() {
+            let scrollTotal = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+            // show scrollToTopBtn if the user scrolled down 10% of the website view otherwise hide it 
+            if ((document.documentElement.scrollTop / scrollTotal ) > 0.10 )
+                scrollToTopBtn.classList.add("showScrollToTopBtn")
+            else 
+                scrollToTopBtn.classList.remove("showScrollToTopBtn")
+        }
+
+        document.addEventListener("scroll", handleScroll)
+    </script>
+</body>
+
+</html>
